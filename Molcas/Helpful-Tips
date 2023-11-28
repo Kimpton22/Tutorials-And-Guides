@@ -1,0 +1,6 @@
+- always check names within submission scripts and input files
+- After an active space has been built and you have done an optimization save that folder into work Lopez and use it as your hub for starting XYZ files as it will be used a LOT.
+- Try and stay consistent with the order of atoms in your xyz files as if they are all the same it will be much easier to use with PyRAIMD.
+- When making an active space there is many different ways to rotate in chemical relevant orbitals
+    - trick one: extending the bond of the orbital that is desired, then reading those orbitals into an optimized geometry
+    - Try varying basis sets
