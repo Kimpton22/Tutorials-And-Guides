@@ -1,14 +1,14 @@
 >> EXPORT MOLCAS_MAXITER=10000
 &GATEWAY
  coord=$MOLCAS_PROJECT.xyz
- basis
+ basis (basis set for all atoms)
  "Basis-Set"
- Group=c1
+ Group=c1 (specify the symmetry of the molecule, c1 = nosymm)
  RICD
- constraint
+ constraint (define constraints)
  x=Ediff 1 2 (NEEDED FOR MECI, README.md for more information)
- values
- x=0
+ values (values for the constraint)
+ x=0 (NEEDED FOR MECI, README.md for more information)
  end of constraint
 
 >> do while (NEEDED FOR MECI, README.md for more information)
@@ -18,13 +18,13 @@ doanalytic
 
 &RASSCF
  fileorb=$MOLCAS_PROJECT.StrOrb
- Spin="#"
+ Spin="#" (value of spin multiplicity)
  Nactel="# # #" (Num Orbitals, 0, 0)
  Inactive="#" (orbital before active space begins)
- Charge="#"
- Ras1="#"
- Ras2="#" (Num of Electrons)
- Ras3="#"
+ Charge="#" (total charge on the system as an integer)
+ Ras1="#" (number of orbitals in each symmetry for RAS1)
+ Ras2="#" (number of orbitals in each symmetry for RAS2)
+ Ras3="#" (number of orbitals in each symmetry for RAS3)
  ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
  CIRoot="# # #" (Num of states, Num of Weights, Weight)
  Rlxroot="#" (State to be relaxed to in geometry optimization)
