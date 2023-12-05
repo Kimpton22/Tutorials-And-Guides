@@ -1,1 +1,44 @@
+>> EXPORT MOLCAS_MAXITER=10000
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ "Basis-Set"
+ Group=c1
+ RICD
+ constraint
+ x=Ediff 1 2 (NEEDED FOR MECI, README.md for more information)
+ values
+ x=0
+ end of constraint
 
+>> do while (NEEDED FOR MECI, README.md for more information)
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin="#"
+ Nactel="# # #" (Num Orbitals, 0, 0)
+ Inactive="#" (orbital before active space begins)
+ Charge="#"
+ Ras1="#"
+ Ras2="#" (Num of Electrons)
+ Ras3="#"
+ ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
+ CIRoot="# # #" (Num of states, Num of Weights, Weight)
+ Rlxroot="#" (State to be relaxed to in geometry optimization)
+
+&SLAPAF
+maxstep="0.##" (largest change of the internal coordinates which will be accepted)
+Iterations="#" (num of iterations which will be allowed in the relaxation procedure)
+thrshld="0.# #.#D-#" (specifies the convergence criterion with respect to the energy change and the norm of the gradient)
+
+>> end do
+
+&RASSI
+&CASPT2
+MULTistate (allows for XMS-CASPT2)
+all
+shift (add a shift to the external part of the zero order Hamiltonian)
+0.#
