@@ -1,6 +1,6 @@
 MECI - Minimum Energy Conical Intersection
 
-What is a MECI?
+What is a MECI? /n
   A MECI is a job that can find a minimum energy conical intersection between two states (i.e ground and S1) given a starting geometry. The job will constrain the energy difference between the specfied states (most likely S0 and S1) and travel along a energy surface until it is able to find a minmum in which the two states meet. 
 
 Starting Geometries
