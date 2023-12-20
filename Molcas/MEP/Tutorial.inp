@@ -1,0 +1,36 @@
+>> EXPORT MOLCAS_MAXITER=10000
+
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ aug-cc-pvdz
+ Group=c1
+ RICD
+
+>> do while
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin="#" (value of spin multiplicity)
+ Nactel="# # #" (Num Orbitals, 0, 0)
+ Inactive="#" (orbital before active space begins)
+ Charge="#" (total charge on the system as an integer)
+ Ras1="#" (number of orbitals in each symmetry for RAS1)
+ Ras2="#" (number of orbitals in each symmetry for RAS2)
+ Ras3="#" (number of orbitals in each symmetry for RAS3)
+ ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
+ CIRoot="# # #" (Num of states, Num of Weights, Weight)
+ Rlxroot="#" (State to be relaxed to in geometry optimization)
+
+&SLAPAF
+mep-search (Enables MEP search)
+mepstep="#.#" (specify the step length done in the MEP search, Synonym of IRCStep)
+maxstep="#.#" (largest change of the internal coordinates which will be accepted)
+Iterations="###" (Max number of iterations which will be allowed in the relaxation procedure)
+thrshld="#.# #.#D-#" (specifies the convergence criterion with respect to the energy change)
+
+>> End Do
+
