@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --time=dd-hh:mm:ss (time limit)
 #SBATCH --job-name="job-name"
-#SBATCH --partition=lopez
+#SBATCH --partition="partition-name" (i.e. lopez, long, short)
 #SBATCH --mem="##"Gb (memory required)
 #SBATCH --output=%j.o.slurm
 #SBATCH --error=%j.e.slurm
