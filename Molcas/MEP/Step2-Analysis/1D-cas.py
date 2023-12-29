@@ -48,7 +48,7 @@ cd %s
 sbatch Srun_molcas.sh''' % (crntpath,crntname,nxtpath,nxtname,nxtpath)
     return script
 
-idim=5
+idim=# "number of MEP steps"
 title='%s' % sys.argv[1].split('.')[0]
 inptemp=open(sys.argv[1],'r').read()
 guessorb=open('%s.StrOrb' % (title),'r').read()
