@@ -1,0 +1,29 @@
+>> EXPORT MOLCAS_MAXITER=10000
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ aug-cc-pvdz
+ Group=c1
+ RICD
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin=1
+ Nactel=8 0 0
+ Charge=0
+ Ras1=0
+ Ras2=6
+ Ras3=0
+ ITERATIONS=200,100
+ CIRoot=3 3 1
+ Rlxroot=1
+
+&RASSI
+&CASPT2
+XMULTistate
+all
+shift
+0.2
