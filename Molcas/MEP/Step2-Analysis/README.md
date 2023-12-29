@@ -5,7 +5,7 @@ Using the files in the previous step you will preform an analysis on each of the
 Create a directory within the MEP job directory called analysis
 In such directory create a new input file, and copy the .mep.molden file, the job .strorb file from the MEP direcotry
 
-Using find-mep.py run the command line 
+Using find-mep.py run the command line:
 *python3 find-mep.py jobname.mep.molden*
 
 A series of xyz of each of xyz files will be created, each one being a step of the MEP. 
