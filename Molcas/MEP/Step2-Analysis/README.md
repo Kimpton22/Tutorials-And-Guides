@@ -18,3 +18,4 @@ Next run the 1D-cas.py script like so:
 
 This will create a series of directories for each MEP step
 Each directory is one job, sbatch the Srun_molcas.sh to start the string of jobs
+The input used is a XMS-CASPT2 input file
