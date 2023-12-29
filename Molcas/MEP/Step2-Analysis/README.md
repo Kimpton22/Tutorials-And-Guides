@@ -1,4 +1,5 @@
-## Step1 /n
+### How to run a MEP analysis
+## Step1 
 Using the files in the previous step you will preform an analysis on each of the steps of the MEP
 
 Create a directory within the MEP job directory called analysis
@@ -9,7 +10,7 @@ Using find-mep.py run the command line
 
 A series of xyz of each of xyz files will be created, each one being a step of the MEP. 
 
-## Step2 /n
+## Step2 
 Next run the 1D-cas.py script like so:
 *python3 1D-cas.py jobname.inp*
 
