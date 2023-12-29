@@ -9,8 +9,10 @@ Using find-mep.py run the command line:
 *python3 find-mep.py jobname.mep.molden*
 
 A series of xyz of each of xyz files will be created, each one being a step of the MEP. 
+Put all of the generated xyz files into a directory and name it coord
 
 ## Step2 
+in the 1D-cas.py script change the number of idim to the number of MEP steps you have generated
 Next run the 1D-cas.py script like so:
 *python3 1D-cas.py jobname.inp*
 
