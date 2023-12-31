@@ -52,7 +52,9 @@ python3 overlay.py list.txt
 ```
 
 Outputs:
-1. {filename}[1-n]-overlay.xyz - numbered xyz files that have been aligned with the original xyz file; where n is the number of the interpolated geometries.
+1. {filename}[1-n]-overlay.xyz - numbered xyz files aligned with the original xyz file; where n is the number of the interpolated geometries.
+
+For the example above you would expect an overlaid version of the 20 interpolated geometries.
 
 NOTE: Move all the overlay geometries into another folder (i.e. overlaid_geos) and use the following bash command to delete the '-overlay' from the file name. 
 ```
@@ -60,3 +62,23 @@ for i in *; do mv "$i" "${i%%-overlay.xyz}.xyz"; done
 ```
 
 NOTE: You need to do this TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product. 
+
+# Step 4: Wigner Sampling
+1. seperate.py - python scripts that separates the Wigner sampled geometries
+2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling
+
+How to run:
+```
+python3 seperate.py wigner-{filename}-300.0.xyz {output name}
+```
+
+Example: 
+```
+python3 seperate.py wigner-bd-td-300.0.xyz bd-td
+```
+
+Outputs: 
+1. {output name}-[1-n].xyz - numbered xyz files for the individual Wigner sampled geometries
+
+For the example above you would expect to have the first n geometries of the Wigner sampling of the reactant.
+
