@@ -33,9 +33,9 @@ python3 separate.py output.xyz bd-td
 ```
 
 Outputs: 
-1. output_namd[1-n].xyz - numbered xyz files containing the individual xyz from the interpolations, where n is the number of geometries
+1. output_namd[1-n].xyz - numbered xyz files containing the individual xyz from the interpolations, where n is the number of interpolated geometries
 
-For the example above you would get a list of xyz files title bd-td-#.xyz, where # would be 1-20/
+For the example above you would get a list of xyz files title bd-td-#.xyz, where # would be 1-20.
 
    
 NOTE: You need to do this TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product 
