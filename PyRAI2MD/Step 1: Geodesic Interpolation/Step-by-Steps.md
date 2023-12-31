@@ -76,8 +76,8 @@ for i in *; do mv "$i" "${i%%-overlay.xyz}.xyz"; done
 ```
 
 # Step 4: Wigner Sampling
-1. seperate.py - python scripts that separates the Wigner sampled geometries
-2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling
+1. seperate.py - python scripts that separates the Wigner sampled geometries.
+2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling.
 
 How to run:
 ```
@@ -90,14 +90,14 @@ python3 seperate.py wigner-bd-td-300.0.xyz bd-td
 ```
 
 Outputs: 
-1. {output name}-[1-n].xyz - numbered xyz files for the individual Wigner sampled geometries
+1. {output name}-[1-n].xyz - numbered xyz files for the individual Wigner sampled geometries.
 
 For the example above you would expect to have the first n geometries of the Wigner sampling of the reactant.
 
 # Step 5: Organization
 This step is to organize the files to be able to set up single calculations for all the interpolated structures. 
 
-Once you have complete steps 1-4 for both ```first_part``` (i.e. reactant -> MECI) and ```second_part``` (i.e. MECI -> product) 
+Once you have complete steps 1-4 for both ```first_part``` (i.e. reactant -> MECI) and ```second_part``` (i.e. MECI -> product). 
 
 1. Make directory title ```interpolation```
 2. `cd interpolation`
@@ -107,17 +107,17 @@ Once you have complete steps 1-4 for both ```first_part``` (i.e. reactant -> MEC
 
 # Step 6: Set-up Calculations
 Files needed: 
-1. Gen-wigner-interp.py - python script that generates the MOLCAS single point calculations
-2. {filename}.inp - MOLCAS input file
-3. {filename}.StrOrb - MOLCAS starting orbitals, usually from the S0 optimized calculations
+1. Gen-wigner-interp.py - python script that generates the MOLCAS single-point calculations.
+2. {filename}.inp - MOLCAS input file.
+3. {filename}.StrOrb - MOLCAS starting orbitals, usually from the S0 optimized calculations.
 
 How to run: 
 ```
 python3 Gen-wigner-interp.py {filename}
 ```
 Outputs: 
-1. {filename}[1-n]/bd-td-[1-m] - folders containing the single point calculations, where n is the number of Wigner sample geometries and m is the number of interpolated steps
-2. runall.sh - shell script that will run all the calculations; usually split this due to hitting the limit of the job submission on the Discovery Cluster
+1. {filename}[1-n]/bd-td-[1-m] - folders containing the single point calculations, where n is the number of Wigner sample geometries and m is the number of interpolated steps.
+2. runall.sh - shell script that will run all the calculations; usually split this due to hitting the limit of the job submission on the Discovery Cluster.
 
 
 
