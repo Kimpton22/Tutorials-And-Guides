@@ -3,8 +3,8 @@ This step will generate the initial training data set for us to use with PyRAI2M
 
 NOTE: You need to do the following steps TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product. Each of these will have their folders. 
 
-1. first_part -> contains the reactant -> MECI geometries
-2. second_part -> contains the MECI -> product geometries
+1. `first_part` -> contains the reactant -> MECI geometries
+2. `second_part` -> contains the MECI -> product geometries
 
 Lets start with the first_part folder (i.e. reactant -> MECI): 
 
@@ -20,7 +20,36 @@ bash interpolation.sh {xyz file containing both geometries} {number of steps}
 
 Example xyz file: 
 ```
-INSERT XYZ FILE HERE
+  13
+ Reactant
+ N     1.63675933    -0.62894955     0.01595707
+ N     1.63676838     0.62893842     0.01583925
+ B    -0.74947645     0.00000540    -0.02846574
+ C    -2.32215207     0.00000076     0.01015706
+ H    -2.77251644    -0.89032567    -0.43410182
+ H    -2.60923154    -0.00021811     1.07166147
+ H    -2.77254750     0.89047523    -0.43376812
+ C     0.21778192    -1.23896749    -0.02003786
+ H     0.16055291    -1.87661794    -0.90737989
+ H     0.12548282    -1.90431280     0.84328345
+ C     0.21779631     1.23896583    -0.02015607
+ H     0.12550241     1.90442613     0.84307539
+ H     0.16056991     1.87649977    -0.90758418
+  13
+ Product
+ N        1.039489830     -0.373762820      0.524923480
+ N        1.635186900      0.646109510     -0.105555570
+ B       -0.540856090     -0.037479010     -0.174452830
+ C       -1.973082260     -0.111198330      0.496792310
+ H       -2.739015160     -0.110176770     -0.289608730
+ H       -2.122361370     -1.021791180      1.083564220
+ H       -2.179193310      0.747141350      1.142434880
+ C        0.374969060     -1.334625360     -0.478862250
+ H        0.977044250     -1.504652610     -1.367792250
+ H        0.087323390     -2.245091190      0.034563530
+ C        0.284862650      1.283476440     -0.609281680 
+ H        0.082785900      2.197595280     -0.052745160
+ H        0.454405890      1.524236820     -1.661439060
 ```
 
 Example Command:
