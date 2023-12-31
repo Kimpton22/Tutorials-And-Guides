@@ -1,3 +1,13 @@
+# Case Study 1: Geodesic Interpolation
+This step will generate the initial training data set for us to use with PyRAI2MD to conduct machine learning - non-adiabatic molecular dynamics. 
+
+NOTE: You need to do the following steps TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product. Each of these will have their folders. 
+
+1. first_part -> contains the reactant -> MECI geometries
+2. second_part -> contains the MECI -> product geometries
+
+Lets start with the first_part folder (i.e. reactant -> MECI): 
+
 # Step 1: Interpolation
 Files that are needed: 
 1. interpolation.sh - shell script that will run the geodesic interpolation.
@@ -8,8 +18,12 @@ How to run:
 bash interpolation.sh {xyz file containing both geometries} {number of steps}
 ```
 
-Example:
+Example xyz file: 
+```
+INSERT XYZ FILE HERE
+```
 
+Example Command:
 ```
 bash interpolation.sh reactant_meci.xyz 20
 ```
@@ -61,8 +75,6 @@ NOTE: Move all the overlay geometries into another folder (i.e. overlaid_geos) a
 for i in *; do mv "$i" "${i%%-overlay.xyz}.xyz"; done
 ```
 
-NOTE: You need to do this TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product. 
-
 # Step 4: Wigner Sampling
 1. seperate.py - python scripts that separates the Wigner sampled geometries
 2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling
@@ -81,4 +93,20 @@ Outputs:
 1. {output name}-[1-n].xyz - numbered xyz files for the individual Wigner sampled geometries
 
 For the example above you would expect to have the first n geometries of the Wigner sampling of the reactant.
+
+# Step 5: Organization
+This step is to organize the files to be able to set up single calculations for all the interpolated structures. 
+
+Once you have complete steps 1-4 for both ``` first_part``` (i.e. reactant -> MECI) and ```second_part``` (i.e. MECI -> product) 
+
+1. Make directory title ```interpolation```
+2. `cd interpolation`
+3. Make directories for each part (i.e. `first_part` and `second_part`)
+4. Copied the overlaid geometries into their respective folders
+5. Move the directory that contains the Wigner sample geometries into the `interpolation` folder
+
+
+
+
+
 
