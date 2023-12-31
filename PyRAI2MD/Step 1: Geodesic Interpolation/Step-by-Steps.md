@@ -19,4 +19,23 @@ Outputs:
 
 For the example above you would expect the output.xyz to have 20 geometries of equidistant steps between the reactant and MECI.
 
+# Step 2: Seperation
+Files that are needed: 
+1. seperate.py - python script that will separate the xyz files from a combined xyz (i.e. output.xyz, wigner.300.xyz)
+
+How to run: 
+```
+python3 separate.py {file_name.xyz} {output name}
+```
+Example: 
+```
+python3 separate.py output.xyz bd-td
+```
+
+Outputs: 
+1. output_namd[1-n].xyz - numbered xyz files containing the individual xyz from the interpolations, where n is the number of geometries
+
+For the example above you would get a list of xyz files title bd-td-#.xyz, where # would be 1-20/
+
+   
 NOTE: You need to do this TWICE, one is for the reactant -> a minimum energy conical intersection (MECI), and then another from MECI -> product 
