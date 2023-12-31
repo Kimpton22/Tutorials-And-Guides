@@ -70,13 +70,13 @@ Outputs:
 
 For the example above you would expect an overlaid version of the 20 interpolated geometries.
 
-NOTE: Move all the overlay geometries into another folder (i.e. overlaid_geos) and use the following bash command to delete the '-overlay' from the file name. 
+NOTE: Make a directory for the overlaid geometries (i.e. `overlaid_geos`) and ove all the overlay geometries into this folder and use the following bash command to delete the '-overlay' from the file name. 
 ```
 for i in *; do mv "$i" "${i%%-overlay.xyz}.xyz"; done
 ```
 
 # Step 4: Wigner Sampling
-1. seperate.py - python scripts that separates the Wigner sampled geometries.
+1. seperate.py - python scripts that separate the Wigner sampled geometries.
 2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling.
 
 How to run:
@@ -102,7 +102,7 @@ Once you have complete steps 1-4 for both ```first_part``` (i.e. reactant -> MEC
 1. Make directory title ```interpolation```
 2. `cd interpolation`
 3. Make directories for each part (i.e. `first_part` and `second_part`)
-4. Copy the overlaid geometries into their respective folders
+4. Copy the overlaid geometries from the `overlaid_geos` folders into their respective folders
 5. Move the directory that contains the Wigner sample geometries into the `interpolation` folder
 
 # Step 6: Set-up Calculations
