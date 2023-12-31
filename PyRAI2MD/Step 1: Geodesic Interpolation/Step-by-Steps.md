@@ -64,7 +64,7 @@ For the example above you would expect the output.xyz to have 20 geometries of e
 
 # Step 2: Separation
 Files that are needed: 
-1. seperate.py - python script that will separate the xyz files from a combined xyz (i.e. output.xyz, wigner.300.xyz).
+1. separate.py - python script that will separate the xyz files from a combined xyz (i.e. output.xyz, wigner.300.xyz).
 
 How to run: 
 ```
@@ -107,6 +107,9 @@ for i in *; do mv "$i" "${i%%-overlay.xyz}.xyz"; done
 # Step 4: Wigner Sampling
 1. seperate.py - python scripts that separate the Wigner sampled geometries.
 2. wigner-{filename}.300.0.xyz - an xyz file that contains all the geometries generated from the Wigner sampling.
+
+NOTE: Change the following line in the `separate.py` script:
+`ngeom = # of wigner sample geometries that you want`
 
 How to run:
 ```
