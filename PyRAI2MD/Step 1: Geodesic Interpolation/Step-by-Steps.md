@@ -88,7 +88,7 @@ Files that are needed:
    for ((a=1;a<={# of interpolated geometries};a++)); do echo {filename}-$a.xyz>> list.txt; done
    ```
    Example of list.txt file, the first entry needs to be the reference structure:
-   `
+   ```
    bd-td.xyz
    bd-td-1.xyz
    bd-td-2.xyz
@@ -98,7 +98,7 @@ Files that are needed:
    bd-td-6.xyz
    bd-td-7.xyz
    bd-td-8.xyz
-   `
+   ```
 4. reference.xyz - a reference xyz file with the original orientation (i.e. S0 optimized structure).
 
 How to run:
