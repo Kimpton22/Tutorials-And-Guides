@@ -97,15 +97,27 @@ For the example above you would expect to have the first n geometries of the Wig
 # Step 5: Organization
 This step is to organize the files to be able to set up single calculations for all the interpolated structures. 
 
-Once you have complete steps 1-4 for both ``` first_part``` (i.e. reactant -> MECI) and ```second_part``` (i.e. MECI -> product) 
+Once you have complete steps 1-4 for both ```first_part``` (i.e. reactant -> MECI) and ```second_part``` (i.e. MECI -> product) 
 
 1. Make directory title ```interpolation```
 2. `cd interpolation`
 3. Make directories for each part (i.e. `first_part` and `second_part`)
-4. Copied the overlaid geometries into their respective folders
+4. Copy the overlaid geometries into their respective folders
 5. Move the directory that contains the Wigner sample geometries into the `interpolation` folder
 
+# Step 6: Set-up Calculations
+Files needed: 
+1. Gen-wigner-interp.py - python script that generates the MOLCAS single point calculations
+2. {filename}.inp - MOLCAS input file
+3. {filename}.StrOrb - MOLCAS starting orbitals, usually from the S0 optimized calculations
 
+How to run: 
+```
+python3 Gen-wigner-interp.py {filename}
+```
+Outputs: 
+1. {filename}[1-n]/bd-td-[1-m] - folders containing the single point calculations, where n is the number of Wigner sample geometries and m is the number of interpolated steps
+2. runall.sh - shell script that will run all the calculations; usually split this due to hitting the limit of the job submission on the Discovery Cluster
 
 
 
