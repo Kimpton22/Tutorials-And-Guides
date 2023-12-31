@@ -4,15 +4,15 @@ Files that are needed:
 2. point1-point2.xyz - an xyz file that contains 2 geometries; (1) reactant geometry (i.e. point 1) and (2) the product geometry (i.e. point 2). These are the two points where the geodesic interpolation will be done for.
 
 How to run:
-''' 
-bash interpolation.sh point1-point2.xyz {number of steps}
-'''
+``` 
+bash interpolation.sh {xyz file containing both geometries} {number of steps}
+```
 
 Example:
 
-'''
+```
 bash interpolation.sh reactant_meci.xyz 20
-'''
+```
 
 Outputs: 
 1. output.xyz - a xyz file that contains all the interpolated steps.
