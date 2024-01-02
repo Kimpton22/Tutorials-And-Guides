@@ -163,6 +163,36 @@ Outputs:
 1. {filename}[1-n]/bd-td-[1-m] - folders containing the single point calculations, where n is the number of Wigner sample geometries and m is the number of interpolated steps.
 2. runall.sh - shell script that will run all the calculations; usually split this due to hitting the limit of the job submission on the Discovery Cluster.
 
+# Step 6: Data Extraction
+Files that are needed: 
+1. check.sh.
+2. input 
+3. training_data_tool.py - collects the single point energies into a json file.
+4. data_shuffle_tool.py - shuffles the json file, so that it NN can train better.
 
+How to run: 
+The following line will let you know of any single-point calculations that failed.
+```
+bash check.sh
+```
+The following lines collect the data. 
+
+```
+python3 training_data_tool.py -i input -n 20
+```
+
+Where the -i flags an input file and -n flags the number of computers that will be used to collect the data. 
+
+Example input: 
+
+```
+INSERT INPUT EXAMPLE
+```
+
+The following will shuffle it
+
+```
+python3 data_shuffle_tool.py data.json
+```
 
 
