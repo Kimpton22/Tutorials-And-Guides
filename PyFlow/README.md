@@ -47,10 +47,10 @@ cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
 <img width="149" alt="Example Core" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c88389c5-64fc-41dc-9a27-c6f020c07565">
 
 #### Changing spacers and terminal
-Here are the spacers and terminal on the shared pymolgen script:
+Below are the spacers and terminal on the shared pymolgen script, if you need to change them, please edit the script
+
 <img width="387" alt="terminal and spacers" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c6599344-0b81-451d-9aa9-5a2715cfcc70">
 
-If you need to change it, please edit the script
 
 
 
