@@ -57,11 +57,29 @@ Below are the spacers and terminal on the shared pymolgen script, if you need to
    ```
    python pymolgen.py 'SMILES'
    ```
-
-
 --- 
 
+# Creating and submitting workflows
+1. Copy config files
+cp /work/lopez/share_from_Leticia/forSteven/scripts/config-step* .
 
+Activate pyflow
+
+Set up workflow: change XXX for the workflow name and config-stepX.json for the correct config file name
+pyflow setup XXX --config_file config-stepX.json
+Example: pyflow setup 001_step1 --config_file config-step1.json
+
+Copy molecules generated to unopt_pdbs directory inside the workflow folder 
+Limit of 1000 pdbs per workflow, conformers must be on the same workflow
+
+Submit workflow 
+		pyflow begin
+
+Check progress
+		pyflow progress
+
+
+---
 # Clean up workflow
 Remove temporary files for failed jobs, for completed jobs them are automatically deleted
 ```
