@@ -11,7 +11,7 @@ https://github.com/northeastern-rc/pyflow-installation-script
 - If you have not loaded Gaussian and GAMESS on your .bashrc, you must uncomment lines 58 to 66 in the install_pyflow.sh file
 
 ### Testing installation
-Copy necessary scripts:
+#### Copy necessary scripts:
 ```
 cp -r /work/lopez/share_from_Leticia/test-pyflow/ .
 ```
@@ -43,7 +43,7 @@ pyflow progress
 cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
 ```
 
-### Draw molecule on Chemdraw and select substituent location by using U for spacers
+#### Draw molecule on Chemdraw and select substituent location by using U for spacers
 <img width="149" alt="Example Core" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c88389c5-64fc-41dc-9a27-c6f020c07565">
 
 #### Changing spacers and terminals
@@ -51,7 +51,7 @@ Below are the spacers and terminal on the shared pymolgen script, if you need to
 
 <img width="387" alt="terminal and spacers" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c6599344-0b81-451d-9aa9-5a2715cfcc70">
 
-### Generating molecule
+#### Generating molecule
 1. Remember to source your pyflow environment and request resources
 2. To generate pdb files, use the following command, replacing "SMILES" with the actual SMILES string.
    ```
@@ -60,14 +60,16 @@ Below are the spacers and terminal on the shared pymolgen script, if you need to
 --- 
 
 # Creating and submitting workflows
-1. Copy config files
-cp /work/lopez/share_from_Leticia/forSteven/scripts/config-step* .
+#### 1. Copy config files
+   ```
+    cp /work/lopez/share_from_Leticia/verde-pyflow/verde-config.json .
+   ```
 
-Activate pyflow
+#### 2. Set up workflow: change XXX for the workflow name
+   ```
+pyflow setup XXX --config_file verde-config.json
+   ```
 
-Set up workflow: change XXX for the workflow name and config-stepX.json for the correct config file name
-pyflow setup XXX --config_file config-stepX.json
-Example: pyflow setup 001_step1 --config_file config-step1.json
 
 Copy molecules generated to unopt_pdbs directory inside the workflow folder 
 Limit of 1000 pdbs per workflow, conformers must be on the same workflow
@@ -78,6 +80,9 @@ Submit workflow
 Check progress
 		pyflow progress
 
+
+Scheme of performed jobs. Part 1 will be performed when generated molecules.
+<img width="1161" alt="workflow" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/0fe723f7-a8d0-492c-a831-ea51a9d07731">
 
 ---
 # Clean up workflow
