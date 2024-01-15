@@ -44,7 +44,7 @@ cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
 ```
 
 ### Draw molecule on Chemdraw and select substituent location by using U for spacers
-!https://github.com/Kimpton22/Tutorials-And-Guides/blob/main/PyFlow/Example%20Core.png
+<img width="149" alt="Example Core" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c88389c5-64fc-41dc-9a27-c6f020c07565">
 
 
 
