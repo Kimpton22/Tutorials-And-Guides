@@ -36,10 +36,7 @@ pyflow progress
 
 
 
-
-
-
-## Clean up workflow
+# Clean up workflow
 Remove temporary files for failed jobs, for completed jobs them are automatically deleted
 ```
 rm -r workflow*/*/*/failed/*.chk
