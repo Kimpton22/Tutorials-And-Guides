@@ -1,4 +1,6 @@
 # Installing Pyflow 
+
+#### Reference VERDE Paper: https://pubs.acs.org/doi/10.1021/acs.jpclett.9b02577
 This Github page contains instructions for installing Pyflow: 
 ```
 https://github.com/northeastern-rc/pyflow-installation-script
@@ -34,6 +36,15 @@ cp bench-MB/* bench_round001/unopt_pdbs/ cd bench_round001/ && pyflow begin --do
 pyflow progress
 ```
 --- 
+
+# Generating Molecules
+#### Copy pymolgen script from VERDE
+```
+cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
+```
+
+### Draw molecule on Chemdraw and select substituent location by using U for spacers
+
 
 
 
