@@ -4,7 +4,7 @@ This Github page contains instructions for installing Pyflow:
 https://github.com/northeastern-rc/pyflow-installation-script
 ```
 
-#### Reminders:
+### Reminders:
 - Make sure to have PyFlow.txt in the same directory as install_pyflow.sh.
 - If you have not loaded Gaussian and GAMESS on your .bashrc, you must uncomment lines 58 to 66 in the install_pyflow.sh file
 
@@ -14,22 +14,22 @@ Copy necessary scripts:
 cp -r /work/lopez/share_from_Leticia/test-pyflow/ .
 ```
 
-### Test 1 - Creating molecules
+#### Test 1 - Creating molecules
 ```
 python pymolgen-bench.py bench-MB 'CN(C1=CC=C(N=C2C=C([U])C(N(C)C)=CC2=[S+]3)C3=C1)C'
 ```
 
-### Test 2 - Set up Workflow
+#### Test 2 - Set up Workflow
 ```
 pyflow setup bench_round001 --config_file config-001.json
 ```
 
-### Test 3 - Submit Workflow
+#### Test 3 - Submit Workflow
 ```
 cp bench-MB/* bench_round001/unopt_pdbs/ cd bench_round001/ && pyflow begin --do_not_track
 ```
 
-### Test 4 - Check progress
+#### Test 4 - Check progress
 ```
 pyflow progress
 ```
