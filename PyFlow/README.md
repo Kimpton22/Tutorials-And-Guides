@@ -46,12 +46,20 @@ cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
 ### Draw molecule on Chemdraw and select substituent location by using U for spacers
 <img width="149" alt="Example Core" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c88389c5-64fc-41dc-9a27-c6f020c07565">
 
-#### Changing spacers and terminal
+#### Changing spacers and terminals
 Below are the spacers and terminal on the shared pymolgen script, if you need to change them, please edit the script
 
 <img width="387" alt="terminal and spacers" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c6599344-0b81-451d-9aa9-5a2715cfcc70">
 
+### Generating molecule
+1. Remember to source your pyflow environment and request resources
+2. To generate pdb files, use the following command, replacing "SMILES" with the actual SMILES string.
+   ```
+   python pymolgen.py 'SMILES'
+   ```
 
+
+--- 
 
 
 # Clean up workflow
