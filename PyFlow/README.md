@@ -70,9 +70,8 @@ Below are the spacers and terminal on the shared pymolgen script, if you need to
 pyflow setup XXX --config_file verde-config.json
    ```
 
-
-Copy molecules generated to unopt_pdbs directory inside the workflow folder 
-Limit of 1000 pdbs per workflow, conformers must be on the same workflow
+#### 3. Copy molecules generated to unopt_pdbs directory inside the workflow folder 
+_Limit of 1000 pdbs per workflow, conformers must be on the same workflow_
 
 Submit workflow 
 		pyflow begin
