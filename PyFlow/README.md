@@ -73,15 +73,24 @@ pyflow setup XXX --config_file verde-config.json
 #### 3. Copy molecules generated to unopt_pdbs directory inside the workflow folder 
 _Limit of 1000 pdbs per workflow, conformers must be on the same workflow_
 
-Submit workflow 
-		pyflow begin
+#### 4. Go inside workflow directory and submit the following command
+   ```
+pyflow begin
+   ```
+_If workflow with same name was submitted before, add --do_not_track flag_
+ ```
+pyflow begin --do_not_track flag
+   ```
 
-Check progress
-		pyflow progress
-
+#### 5. Check progress
+   ```
+pyflow progress
+   ```
 
 Scheme of performed jobs. Part 1 will be performed when generated molecules.
 <img width="1161" alt="workflow" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/0fe723f7-a8d0-492c-a831-ea51a9d07731">
+
+If need to change jobs type, edit the config file. Details on the keywords on PyFlow GitHub: https://github.com/kuriba/PyFlow
 
 ---
 # Clean up workflow
@@ -93,40 +102,3 @@ rm -r workflow*/*/*/failed/*.chk
 rm -r workflow*/*/*/failed/*.rwf
 ```
 
-## Extract results from Workflow using gather-results-withsp.py
-1. Activate pyflow
-```
-conda activate pyflow
-```
-2. Run extraction script
-```
-python3 gather-results-withsp.py name-workflow
-```
-
-## Generate plots
-### S0 Potentials + ColorMap showing wavelength
-CSV details
-  1. Need to be named S0.csv
-  2. Collumn must have specific names: Oxi_S0,Red_S0,Wavelength
-
-Usage
-```
-python3 plot-s0-colormap.py S0
-```
-
-Resulted plot
-![plot_S0](https://github.com/adaogomesl/Leticia-LopezLab/assets/100699955/2a48e439-f486-4e13-8054-7ffd50c43fbd)
-
-### Excited State Potentials + ColorMap showing wavelength
-CSV details
-  1. Need to be named S1.csv or T1.csv
-  2. Collumn must have specific names: Oxi_S1,Red_S1
-     
-_in case of T1, replace S1 for T1_
-
-Usage
-```
-python3 plot-scatter.py S1
-```
-Resulted plot
-![plot_S1](https://github.com/adaogomesl/Leticia-LopezLab/assets/100699955/91ecc5c8-9702-404a-8524-cc4ce6e13bf2)
