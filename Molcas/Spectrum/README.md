@@ -1,6 +1,6 @@
 # 6. Absorption Spectrum
 ## Files necessary
-```.inp```,```.xyz```,```.sh```, ```.StrOrb```, ```control```,Gen-FSSH.py```. Input is the same as XMS-CASPT2
+```.inp```,```.xyz```,```.sh```, ```.StrOrb```, ```control```, ```Gen-FSSH.py```. Input is the same as XMS-CASPT2
 
 Scripts
 ```
