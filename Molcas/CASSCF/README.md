@@ -61,5 +61,16 @@ RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway
  CIRoot=8 8 1
 ```
 
+## Submission
+You should have a directory with all the files mentioned before and use the following command to submit the job:
+_Replace XXX.sh by your filename_
 
+```
+sbatch XXX.sh
+```
+
+## Analysis
+Check .log and .status should have ```Happy landing!```
+
+--- 
 ---
