@@ -90,8 +90,4 @@ Check .log and .status should have ```Happy landing!```
 --- 
 
 
-
-How To Run
- - Submission Line
-
    
