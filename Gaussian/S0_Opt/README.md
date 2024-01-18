@@ -13,4 +13,6 @@ The are two mandatory keyword for geometry optimizations which are ```opt and fr
 
 
 ## Analysis
-1. Check the end of the ```.log``` file to confirm that the job ran smoothly
+1. Check the end of the ```.log``` file to confirm it has the line ```Normal Termination of Gaussian 16```, which confirms that the job finished successfully. If you do not have this line at the end of your file that means that the calculations failed (see common error messages to resolve this).
+2. Open the ```.log``` file with GaussView
+   a. 
