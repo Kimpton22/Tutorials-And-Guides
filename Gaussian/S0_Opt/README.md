@@ -10,7 +10,7 @@ Opt keyword info: [https://gaussian.com/opt/]
 %nprocshared=16
 %mem=5GB
 %chk=tropone.chk
-# opt aug-cc-pvdz pbe0
+# pbe0/aug-cc-pvdz opt
 
 tropone-pbe0-auccpvdz
 
