@@ -6,5 +6,8 @@ Opt keyword info: [https://gaussian.com/opt/]
 ## Files necessary
 ```.com or .gjf and .sh (not necessary if using python submit script)```
 
+## Keywords
+The only mandatory keyword for geometry optimizations is ```opt```. 
+
 ## Output
 The output from the geometry optimization is contained in the ```.log``` file. You should check the end of this file to see if the job succeeded or failed. A successful 
