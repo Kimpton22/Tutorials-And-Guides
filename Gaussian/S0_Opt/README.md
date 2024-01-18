@@ -1,8 +1,8 @@
 # 1. Ground State (S0) Geometry Optimization
 ## References
-RASSCF: [https://gaussian.com/opt/)
+RASSCF: [https://gaussian.com/opt/]
 
 ## Files necessary
-```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb  from previous step)
+```.com or .gjf``` and ```.sh```
 
 #### .inp example
