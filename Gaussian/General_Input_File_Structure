@@ -1,4 +1,5 @@
-# 0. General Arcitecture of .com/.gjf file
+
+
 ```
 %mem=XGB (give some memory)
 %nprocshared=X (give some number of processors)
