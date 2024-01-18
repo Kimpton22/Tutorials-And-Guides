@@ -6,6 +6,4 @@ Opt keyword info: [https://gaussian.com/opt/]
 ## Files necessary
 ```.com or .gjf and .sh (not necessary if using python submit script)```
 
-#### Common Error Messages and Solutions
-
-1. 
+## Output
