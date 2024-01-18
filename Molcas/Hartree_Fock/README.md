@@ -5,7 +5,9 @@ The SCF program of the Molcas program system generates closed-shell Hartree–Fo
 
 ## References
 GATEWAY: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html
-SEWARD: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/seward.html    
+
+SEWARD: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/seward.html 
+
 SCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/scf.html
 
 
