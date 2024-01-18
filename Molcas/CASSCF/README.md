@@ -58,9 +58,5 @@ _Replace XXX.sh by your filename_
 ```
 sbatch XXX.sh
 ```
-
-## Analysis
-Check .log and .status should have ```Happy landing!```
-
---- 
+ 
 ---
