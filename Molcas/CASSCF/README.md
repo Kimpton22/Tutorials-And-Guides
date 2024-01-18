@@ -3,7 +3,8 @@
 One of the central codes in MOLCAS is the RASSCF program, which performs multiconfigurational SCF calculations. Both Complete Active Space (CASSCF) and Restricted Active Space (RASSCF) SCF calculations can be performed with the RASSCF program module [14]
 
 ## References
-RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html](https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rassi.html)
+RASSCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rasscf.html
+
 
 ## Files necessary
 ```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb from Hartree-Fock)
