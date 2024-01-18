@@ -15,12 +15,12 @@ Files that you need:
 
 
 Outputs: 
-1. bd-td-[1–###] – ML-NAMD subfolders that are running to collect the data points
-2. bd-td.log – PyRAI2MD log file
-3. bd-td-ntraj-5-iter-n.xyz – coordinates of the collected geometries
-4. bd-td.adaptive.json – adaptive sampling geometry data
-5. NN-bd-td-n – Updated NN model
-6. NN-bd-td-n.log – NN training log file that contains the updated MAEs
+1. {filename}-[1–###] – ML-NAMD subfolders that are running to collect the data points
+2. {filename}.log – PyRAI2MD log file
+3. {filename}-ntraj-5-iter-n.xyz – coordinates of the collected geometries
+4. {filename}.adaptive.json – adaptive sampling geometry data
+5. NN-{filename}-n – Updated NN model
+6. NN-{filename}-n.log – NN training log file that contains the updated MAEs
 
 What to look for: 
 You will need to look at the log files of each of the iterations (i.e., `NN-bd-td-n.log`) to determine whether the MAE is still within chemical accuracy (0.043 eVs or 1 kcal/mol)
