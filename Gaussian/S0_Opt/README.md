@@ -5,4 +5,4 @@ RASSCF: [https://gaussian.com/opt/]
 ## Files necessary
 ```.com or .gjf```
 
-#### .inp example
+#### .com example
