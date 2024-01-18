@@ -14,7 +14,7 @@ Outputs:
 
 INSERT LOG FILE HERE
 
-## Step 2: Identifying the quickest and most accurate NN committee combination
+## Step 1a: Identifying the quickest and most accurate NN committee combination
 Files needed: 
 1. {filename}.log - log file for the PyRAI2MD grid search job.
 
@@ -29,4 +29,4 @@ Files needed:
 3. data-shuffle.json - data collected from the interpolation step
 
 Outputs:
-1. {filename}.log - will contain the information of the committee model (i.e. MAEs and walltime)
+1. {filename}.log - will contain the information of the committee model (i.e. MAEs and wall time)
