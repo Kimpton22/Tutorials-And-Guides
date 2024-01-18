@@ -10,7 +10,7 @@ SCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/scf.html
 
 
 ## Files necessary
-```.inp```,```.xyz``` (from dft opt) and ```.sh``` 
+```.inp```,```.xyz``` (from dft optimization) and ```.sh``` 
 
 
 ## Submission
