@@ -119,4 +119,6 @@ Reading ['azobenzene', 'azothiophene', 'azofuran'] from /scratch/USER/workflow
    To update the EZ-TS code in your home directory to the most recent version on this page, execute ```EZTS-update```
    This will pull in the standard config.py file, which might write over some user's changes. Therefore, a copy of the current user's config.py is made in the ~/EZ-TS/archive directory with a time/date stamp: config-DATE-TIME.py.
 
+### Credit to Dr. Adrian Daniel, copied from https://github.com/lopez-lab/EZ-TS.git with additions from Bruno Mochi
+
 
