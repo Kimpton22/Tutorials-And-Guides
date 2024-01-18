@@ -1,6 +1,6 @@
 # 2. Single-point CASSCF - Generate CAS orbitals
 
-The RASSI (RAS State Interaction) program forms overlaps and other matrix elements of the Hamiltonian and other operators over a wave function basis, which consists of RASSCF wave functions, each with an individual set of orbitals.
+One of the central codes in MOLCAS is the RASSCF program, which performs multiconfigurational SCF calculations. Both Complete Active Space (CASSCF) and Restricted Active Space (RASSCF) SCF calculations can be performed with the RASSCF program module [14]
 
 ## References
 RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html](https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rassi.html)
