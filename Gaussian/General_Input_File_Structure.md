@@ -14,7 +14,7 @@ XYZ COORDS
 CONSTRAINT SETTINGS (required only for scans and constrained optimizations)
 ```
 
-Some notes:
+## Some general notes
 MEMORY: The amount of memory you should give depends on a) the requirements of the job and b) the limit of RAM availble to nodes on your HPC. a) For large jobs (like ab-initio MP2 or sometimes IRCs), lots of memory is required (100+ GB). b) The RAM limit depends on the exact HPC. It's good to double check this with your computing staff, but at Northeastern the maximum RAM memory is 256 GB.
 
 NPROCS: The number of processors you should request also depends on the size of the job. A good starting point is 8 processors, but if the jobs run very slowly, you may want to increase the number of processors. It's a good idea to request processors in powers of 2 (i.e. 1, 2, 4, 8, or 16). Unfortunately for jobs run with gaussian, more than 16 processors does not substantially decrease run time, so it is not recommended to request more than 16 processors.
