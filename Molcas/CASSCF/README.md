@@ -18,7 +18,8 @@ RASSCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rasscf.h
     a. Use the orbitals generated from the previous cas-sp (```RasOrb```) as initial orbitals (```StrOrb```).
     
     b. Use the ```alter``` command to change the orbital order.
-   This keyword is used to change the ordering of MO in INPORB. The keyword requires first the number of pairs to be interchanged, followed, for each pair, the symmetry species of the pair and the indices of the two permuting MOs (Example below)
+   _This keyword is used to change the ordering of MO in INPORB. The keyword requires first the number of pairs to be interchanged, followed, for each pair, the symmetry species of the pair and the indices of the two permuting MOs (Example below)_
+   
     c. Repeat steps a and b as necessary.
 
 #### .inp example with alter
