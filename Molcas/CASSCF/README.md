@@ -24,24 +24,31 @@ RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway
 #### .inp example with alter
 ```
 &GATEWAY
- coord=$Project.xyz
- basis=ano-s-vdzp
- group=C1
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ ano-rcc-vdzp
+ Group=c1
  RICD
 
 &SEWARD
- doanalytic
+doanalytic
 
 &RASSCF
- FileOrb=$Project.StrOrb
- Spin=1
+ fileorb=$MOLCAS_PROJECT.StrOrb
  alter
- 1
- 1 58 33
+ 3
+ 1 60 57
+ 1 65 67
+ 1 66 73
+ Spin=1
  Charge=0
- NActel=8
- Ras2=9
- CIRoot=8 8 1
+ Nactel=10 0 0
+ Ras1=0
+ Ras2=8
+ Ras3=0
+ ITERATIONS=200,100
+ CIRoot=6 6 1
+ Rlxroot=1
 ```
 
 ## Submission
