@@ -1,30 +1,13 @@
 # 2. Single-point CASSCF - Generate CAS orbitals
 
+The RASSI (RAS State Interaction) program forms overlaps and other matrix elements of the Hamiltonian and other operators over a wave function basis, which consists of RASSCF wave functions, each with an individual set of orbitals.
+
 ## References
 RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html](https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rassi.html)
 
 ## Files necessary
-```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb  from Hartree-Fock)
+```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb from Hartree-Fock)
 
-#### .inp example
-```
-&GATEWAY
- coord=$Project.xyz
- basis=ano-s-vdzp
- group=C1
- RICD
-
-&SEWARD
- doanalytic
-
-&RASSCF
- FileOrb=$Project.StrOrb
- Spin=1
- Charge=0
- NActel=8
- Ras2=9
- CIRoot=8 8 1
-```
 
 ## Analysis
 1. Check .log and .status should have ```Happy landing!```
