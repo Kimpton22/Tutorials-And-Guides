@@ -13,4 +13,4 @@ The are two mandatory keyword for geometry optimizations which are ```opt and fr
 
 
 ## Analysis
-1. 
+1. Check the end of the ```.log``` file to confirm that the job ran smoothly
