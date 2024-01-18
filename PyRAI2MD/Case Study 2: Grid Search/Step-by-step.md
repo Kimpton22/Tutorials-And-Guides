@@ -8,10 +8,13 @@ Files needed:
 3. {filename}.slurm - slurm submission script for the different jobs that will be run during the grid search
 4. data-shuffle.json - data collected from the interpolation step
 
+Outputs: 
+1. filename}.log - log file for the PyRAI2MD grid search job.
+2. `grid_search` - a folder where all the grid search were done
+
 INSERT LOG FILE HERE
 
-
-# Step 2: Identifying the quickest and most accurate NN committee combination
+## Step 2: Identifying the quickest and most accurate NN committee combination
 Files needed: 
 1. {filename}.log - log file for the PyRAI2MD grid search job.
 
@@ -25,3 +28,5 @@ Files needed:
 2. input - PyRAI2MD input file specifically for the committee model training
 3. data-shuffle.json - data collected from the interpolation step
 
+Outputs:
+1. {filename}.log - will contain the information of the committee model (i.e. MAEs and walltime)
