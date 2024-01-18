@@ -1,4 +1,4 @@
-# 2. Single-point CASSCF - Generate CAS orbitals
+# Single-point CASSCF - Generate CAS orbitals
 
 The RASSCF program in Molcas performs multiconfigurational SCF calculations using the Complete Active Space (CAS) Restricted Active Space (RAS) or the Generalized Active Space (GAS) SCF construction of the wave function. In our case, we will use CASSCF.
 
