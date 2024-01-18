@@ -4,7 +4,7 @@ Ground state geometry optimizations in gaussian look to minimize the energy of a
 Opt keyword info: [https://gaussian.com/opt/]
 
 ## Files necessary
-```.com or .gjf```
+```.com or .gjf and .sh (not necessary if using python submit script)```
 
 #### Example .com file
 ```
