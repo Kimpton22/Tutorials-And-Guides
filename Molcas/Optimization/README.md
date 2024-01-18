@@ -1,11 +1,11 @@
-# Optimization and 
+# Optimization  
 
 ## References
 SLAPAF: https://www.molcas.org/documentation/manual/node115.html
-
+Provided with the first order derivative with respect to nuclear displacements the program is capable to optimize molecular structures with or without constraints for minima or transition states. 
 
 ## Files necessary
-```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb from Hartree-Fock)
+```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (RasOrb from CASSCF)
 
 
 ## Analysis
