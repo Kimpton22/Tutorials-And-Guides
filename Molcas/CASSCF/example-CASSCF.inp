@@ -1,0 +1,23 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ ano-rcc-vdzp
+ Group=c1
+ RICD
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin=1
+ Charge=0
+ Nactel=10 0 0
+ Ras1=0
+ Ras2=8
+ Ras3=0
+ ITERATIONS=200,100
+ CIRoot=6 6 1
+ Rlxroot=1
+
+
