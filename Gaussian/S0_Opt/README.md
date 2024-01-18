@@ -3,6 +3,6 @@
 RASSCF: [https://gaussian.com/opt/]
 
 ## Files necessary
-```.com or .gjf``` and ```.sh```
+```.com or .gjf```
 
 #### .inp example
