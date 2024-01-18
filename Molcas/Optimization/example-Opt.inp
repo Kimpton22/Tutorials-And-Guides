@@ -1,0 +1,38 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ aug-cc-pvdz
+ Group=c1
+ RICD
+
+>> Do while
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin=1
+ Nactel=8 0 0
+ Charge=0
+ Ras1=0
+ Ras2=6
+ Ras3=0
+ ITERATIONS=200,100
+ CIRoot=4 4 1
+ Rlxroot=1
+
+&SLAPAF
+Iterations=200
+thrshld=0.0 5.0D-4
+
+>> End Do
+
+&RASSI
+&CASPT2
+XMULTistate
+all
+SHIFT
+0.2
+
+
