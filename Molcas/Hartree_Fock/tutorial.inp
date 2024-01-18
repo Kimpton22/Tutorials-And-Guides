@@ -1,0 +1,11 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis (basis set for all atoms)
+ "Basis-Set"
+ Group=c1 (specify the symmetry of the molecule, c1 = nosymm)
+ RICD
+
+&SEWARD
+doanalytic
+
+&SCF
