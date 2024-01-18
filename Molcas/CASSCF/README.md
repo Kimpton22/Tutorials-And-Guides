@@ -9,6 +9,14 @@ RASSCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rasscf.h
 ## Files necessary
 ```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb from Hartree-Fock)
 
+## Submission
+You should have a directory with all the files mentioned before and use the following command to submit the job:
+_Replace XXX.sh by your filename_
+
+```
+sbatch XXX.sh
+```
+
 
 ## Analysis
 1. Check that both .log and .status files contain the phrase ```Happy landing!```
@@ -52,12 +60,6 @@ doanalytic
  Rlxroot=1
 ```
 
-## Submission
-You should have a directory with all the files mentioned before and use the following command to submit the job:
-_Replace XXX.sh by your filename_
 
-```
-sbatch XXX.sh
-```
  
 ---
