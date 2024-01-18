@@ -19,8 +19,8 @@ sbatch XXX.sh
 
 ## Analysis
 1. Check that both .log and .status files contain the phrase ```Happy landing!```
-2. Open the ```.Opt.xyz``` file in ChemCraft to visualize your geometry also .
-
+2. Open the ```.Opt.xyz``` file in ChemCraft to visualize the geometry
+3. Open the ```.rasscf.molden``` file in ChemCraft to visualize orbitals in the active space (Energy = 0) and check if the active space is still the same from CASSCF.
 
 
  
