@@ -4,7 +4,7 @@
 RASSCF: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html](https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rassi.html)
 
 ## Files necessary
-```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb  from previous step)
+```.inp```,```.xyz```,```.sh``` and ```.StrOrb``` (ScfOrb  from Hartree-Fock)
 
 #### .inp example
 ```
