@@ -12,12 +12,12 @@ RASSCF: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rasscf.h
 
 ## Analysis
 1. Check that both .log and .status files contain the phrase ```Happy landing!```
-2. Open the .rasscf.molden file in ChemCraft to visualize orbitals in the active space (Energy = 0).
-3. If the active space is not as planned, submit a new cas-sp using the following steps:
+2. Open the ```.rasscf.molden``` file in ChemCraft to visualize orbitals in the active space (Energy = 0).
+3. If the active space is not as planned, submit a new CASSCF using the following steps:
     
-    a. Use the orbitals generated from the previous cas-sp (RasOrb) as initial orbitals (StrOrb).
+    a. Use the orbitals generated from the previous cas-sp (```RasOrb```) as initial orbitals (```StrOrb```).
     
-    b. Use the alter command to arrange the orbitals in the correct order.
+    b. Use the ```alter``` command to arrange the orbitals in the correct order.
    This keyword is used to change the ordering of MO in INPORB. The keyword requires first the number of pairs to be interchanged, followed, for each pair, the symmetry species of the pair and the indices of the two permuting MOs (Example below)
     c. Repeat steps a and b as necessary.
 
