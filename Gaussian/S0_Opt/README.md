@@ -7,8 +7,8 @@ Opt keyword info: [https://gaussian.com/opt/]
 
 #### General Arcitecture of .com file
 ```
-%nprocshared=16
-%mem=5GB
+%nprocshared=8
+%mem=20GB
 %chk=tropone.chk
 # pbe0/aug-cc-pvdz opt
 
