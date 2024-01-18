@@ -1,7 +1,7 @@
 # Single-point HF - Generate initial orbitals
 
 ##  Generate initial orbitals
-The SCF program of the Molcas program system generates closed-shell Hartree–Fock, open-shell UHF, and Kohn–Sham DFT wave functions.
+The SCF program of the Molcas program system generates closed-shell Hartree–Fock, open-shell UHF, and Kohn–Sham DFT wave functions. It will generate the ```.ScfOrb```, an orbital file that will be used on the CASSCF calculation.
 
 ## References
 GATEWAY: https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/gateway.html
