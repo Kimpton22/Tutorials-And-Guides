@@ -5,7 +5,7 @@ Opt keyword info: [https://gaussian.com/opt/]
 ## Files necessary
 ```.com or .gjf```
 
-#### General Arcitecture of .com file
+#### Example .com file
 ```
 %nprocshared=8
 %mem=20GB
@@ -30,3 +30,7 @@ tropone-pbe0-auccpvdz
  O                 -2.55083000    0.00000000    0.00019900
  C                 -1.32199800    0.00000000   -0.00001300
 ```
+
+#### Common Error Messages and Solutions
+
+1. 
