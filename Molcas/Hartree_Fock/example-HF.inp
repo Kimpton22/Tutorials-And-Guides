@@ -1,0 +1,12 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis
+ aug-cc-pvdz
+ Group=c1
+ RICD
+
+&SEWARD
+doanalytic
+
+&SCF
+
