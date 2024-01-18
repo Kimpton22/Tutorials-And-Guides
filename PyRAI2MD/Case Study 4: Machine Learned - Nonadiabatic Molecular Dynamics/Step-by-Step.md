@@ -12,6 +12,6 @@ How to run:
 ``python3 traj_generator.py control``
 
 Output: 
-1. {filename}-1–###] – subfolders for ML-NAMD simulations
+1. {filename}-[1–###] – subfolders for ML-NAMD simulations
 2. runset-[0–20] – submission script for grouped ML-NAMD simulations
 3. runall.sh – script to submit all ML-NAMD simulations
