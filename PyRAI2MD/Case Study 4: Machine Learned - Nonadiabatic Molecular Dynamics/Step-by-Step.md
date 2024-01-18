@@ -8,10 +8,13 @@ Files that are needed:
 6. sampling – the input to generate ML-NAMD simulations
 
 # Step 1: Initial condition 
+This will run a Wigner sampling on the reactant and will create the folders for the initial conditions. This folder should contain the following: 
+3. {}
+
 How to run:
 ``python3 traj_generator.py control``
 
 Output: 
 1. {filename}-[1–###] – subfolders for ML-NAMD simulations
-2. runset-[0–20] – submission script for grouped ML-NAMD simulations
+2. runset-[1-##] – submission script for grouped ML-NAMD simulations
 3. runall.sh – script to submit all ML-NAMD simulations
