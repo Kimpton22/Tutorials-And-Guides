@@ -11,10 +11,6 @@ https://github.com/northeastern-rc/pyflow-installation-script
 - If you have not loaded Gaussian and GAMESS on your .bashrc, you must uncomment lines 58 to 66 in the install_pyflow.sh file
 
 ### Testing installation
-#### Copy necessary scripts:
-```
-cp -r /work/lopez/share_from_Leticia/test-pyflow/ .
-```
 
 #### Test 1 - Creating molecules
 ```
@@ -38,10 +34,6 @@ pyflow progress
 --- 
 
 # Generating Molecules
-#### Copy pymolgen script from VERDE
-```
-cp /work/lopez/share_from_Leticia/verde-pyflow/pymolgen.py .
-```
 
 #### Draw molecule on Chemdraw and select substituent location by using U for spacers
 <img width="149" alt="Example Core" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/c88389c5-64fc-41dc-9a27-c6f020c07565">
@@ -60,20 +52,16 @@ Below are the spacers and terminal on the shared pymolgen script, if you need to
 --- 
 
 # Creating and submitting workflows
-#### 1. Copy config files
-   ```
-    cp /work/lopez/share_from_Leticia/verde-pyflow/verde-config.json .
-   ```
 
-#### 2. Set up workflow: change XXX for the workflow name
+#### 1. Set up workflow: change XXX for the workflow name
    ```
 pyflow setup XXX --config_file verde-config.json
    ```
 
-#### 3. Copy molecules generated to unopt_pdbs directory inside the workflow folder 
+#### 2. Copy molecules generated to unopt_pdbs directory inside the workflow folder 
 _Limit of 1000 pdbs per workflow, conformers must be on the same workflow_
 
-#### 4. Go inside workflow directory and submit the following command
+#### 3. Go inside workflow directory and submit the following command
    ```
 pyflow begin
    ```
@@ -82,7 +70,7 @@ _If workflow with same name was submitted before, add --do_not_track flag_
 pyflow begin --do_not_track flag
    ```
 
-#### 5. Check progress
+#### 4. Check progress
    ```
 pyflow progress
    ```
