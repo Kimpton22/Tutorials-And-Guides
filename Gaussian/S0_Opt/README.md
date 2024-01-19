@@ -16,7 +16,7 @@ Within the "opt" keyword, there are a number of optional modifiers that may aid 
 1. calcfc - This option calculates force constants for the molecule which can often speed up optimizations (more direct path to minimum can be found). This can be especially useful for shallow PESs (where large geometric changes result in small energetic changes)
 2. maxstep=X - This option reduces or increases the maximum distance the procedure can move atoms between iterations. This useful for meta-stable intermediates which tend to collapse towards reactants or products. The default is 30 which corresponds to 0.3 bohr or radian units.
 
-NoSymm - This is its own standalone keyword (i.e. does not fall within opt=()) and can sometimes be useful for large symmetric molecules, for which minima are difficult to locate normally. This keywork can be necessary when repeated optimizations lead always end in the same TS (non-minimum) structure (check vibrations to see) to successfully find the minimum). 
+NoSymm - This is its own standalone keyword (i.e. does not fall within opt=()) and can sometimes be useful for large symmetric molecules, for which minima are difficult to locate normally. Sometimes repeated minimum searches all lead towards the same TS or non-minimum structure (one or more negative frequencies). In these cases, NoSymm can sometimes help optimize towards an actually minimum.
 
 ## Analysis
 1. Check the end of the ```.log``` file to confirm it has the line ```Normal Termination of Gaussian 16```, which confirms that the job finished successfully. If you do not have this line at the end of your file that means that the calculations failed (see common error messages to resolve this).
