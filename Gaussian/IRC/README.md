@@ -18,10 +18,6 @@ Within the "IRC" keyword, there are a number of optional modifiers that may aid 
 ## Analysis
 1. Check the end of the ```.log``` file to confirm it has the line ```Normal Termination of Gaussian 16```, which confirms that the job finished successfully. If you do not have this line at the end of your file that means that the calculations failed (see common error messages to resolve this).
 2. Open the ```.log``` file with GaussView. Right-click in the blue space to open the options and go down to "Results". Then click on "Vibrations...". This will bring up a box which shows the vibrational data of your molecule. You need to check that the first frequency is negative (<0) and that all other frequencies are positive (>0). This indicates that the electronic energy of the molecule increases all but one direction on the highly dimensional PES (i.e. that the structure is a TS).
-3. Next click on the "Start Animation" button. This will visualize the vibrational modes of the molecule (i.e. show how it wiggles). It is very important for the vibrational movement of the negative frequency to correspond with the correct chemical transformation/reaction you want. This indicates the correct TS has been found (though an IRC calculation proves this more definitively). 
-    1. In many cases irrelevant TSs will instead be found by gaussian. Many times these are conformational TSs (i.e. eclipsed alkyl groups). This indicates that your initial structure was not close enough to the "true" TS for that method.
-    2. The magnitude of the negative frequency can also be important. This gives an idea of the steepness of the PES near the TS (higher magnitudes indicate larger slopes). Shallow PESs generally have much smaller magnitudes for their imaginary (negative) frequencies, which can make classification of the TS more difficult, especially in the IRC analysis. 
-4. Next, open the ```.log``` file in bash and type ```/```. This does a forward search (like ctrl+f) of the file.
-5. In some cases, the optimization plot can be important. This is a plot of each iterative geometry and its electronic energy. To open this plot, right-click on the blank space, go to results, then click on "Optimization...". This plot can be especially useful in diagnosing errors when they arise. 
+3. You can create a video
 
 
