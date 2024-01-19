@@ -4,7 +4,7 @@
 %nprocshared=X (give some number of processors)
 %chk=FILENAME.chk (saves a checkpoint file so that the job can be restarted if the job fails)
 
-# FUNCTIONAL/BASIS_SET JOB_KEYWORDS
+# FUNCTIONAL BASIS_SET JOB_KEYWORDS (order does not matter here, nor is this line case sensitive. In some files you will see FUNCTION/BASIS_SET which works as well)
 
 JOB_TITLE (This is required)
 
