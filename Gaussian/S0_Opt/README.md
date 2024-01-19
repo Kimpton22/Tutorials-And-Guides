@@ -16,6 +16,8 @@ Within the "opt" keyword, there are a number of optional modifiers that may aid 
 1. calcfc - This option calculates force constants for the molecule which can often speed up optimizations (more direct path to minimum can be found). This can be especially useful for shallow PESs (where large geometric changes result in small energetic changes)
 2. maxstep=X - This option reduces or increases the maximum distance the procedure can move atoms between iterations. This useful for meta-stable intermediates which tend to collapse towards reactants or products. The default is 30 which corresponds to 0.3 bohr or radian units.
 
+NoSymm - This is its own standalone keyword (i.e. does not fall within opt=()) and can sometimes be useful for large symmetric molecules, for which minima are difficult to locate normally. This keywork can be necessary when repeated optimizations lead always end in the same TS (non-minimum) structure (check vibrations to see) to successfully find the minimum). 
+
 ## Analysis
 1. Check the end of the ```.log``` file to confirm it has the line ```Normal Termination of Gaussian 16```, which confirms that the job finished successfully. If you do not have this line at the end of your file that means that the calculations failed (see common error messages to resolve this).
 2. Open the ```.log``` file with GaussView. Right-click in the blue space to open the options and go down to "Results". Then click on "Vibrations...". This will bring up a box which shows the vibrational data of your molecule. You need to check that the frequencies for all modes are >0. This indicates that the electronic energy of the molecule increases in every direction on the highly dimensional PES (i.e. that the structure is a minimum).
