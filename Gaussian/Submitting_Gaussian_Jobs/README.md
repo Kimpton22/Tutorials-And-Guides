@@ -1,5 +1,5 @@
 # 0. Submitting Gaussian Jobs 
-Submitting of Gaussian jobs to an HPC cluster requires a ```.sh or .sbatch``` file. You can create this manually for each job you want to run if you are masochistic (an example sh file is provided if this is you), however, we have developed a script: ```g16_discovery_lopez.py``` to automatically create and submit these .sh files. This script is specifically designed for the Lopez lab and our HPC called discovery. If you want to use this on another HPC, you will need to change the path directories to Gaussian.
+Submitting of Gaussian jobs to an HPC cluster requires a ```.sh or .sbatch``` file. You can create this manually for each job you want to run if you are masochistic (an example sh and corresponding com file is provided if this is you), however, we have developed a script: ```g16_discovery_lopez.py``` to automatically create and submit these .sh files. This script is specifically designed for the Lopez lab and our HPC called discovery. If you want to use this on another HPC, you will need to change the path directories to Gaussian.
 
 ## Usage
 Transfer the script to Discovery (or your HPC) and copy the path to where the script is located. Then, go to the directory with you input ```.com/gjf``` file and enter the following line in bash: 
