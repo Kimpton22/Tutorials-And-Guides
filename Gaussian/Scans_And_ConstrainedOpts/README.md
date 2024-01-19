@@ -1,5 +1,5 @@
 # 1. Scans and Constrained Optimizations
-Ground state geometry optimizations in gaussian look to minimize the energy of a structure by varying geometric parameters in the molecule. It does this using first and sometimes second order derivatives. Geometry optimizations will continue until a) a stationary point is reached on the potential energy surface (PES) (stationary points includes TSs and minima) b) an error causes the job to end early or c) the maximum number of geometry iterations is reached.
+Constrained optimizations and scans in gaussian look to minimize the energy of a structure by varying geometric parameters in the molecule, within the bounds of user-defined constraints. Constrained optimizations are useful to freeze certain critical geometric parameters while allowing the rest of the structure to relax into a better geometry. Scans are a series of constrained optimizations which iteratively increase or decrease on one (1D) or two (2D; not recommended) geometric parameters. Scans are especially useful to get a rudimentary idea of the PES and search for TSs or maxima on the PES. 
 ## References
 Opt keyword info: [https://gaussian.com/opt/] (see options and modredundant for more information on constrained optimizations specifically)
 
