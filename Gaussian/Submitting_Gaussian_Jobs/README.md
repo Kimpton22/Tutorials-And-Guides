@@ -10,7 +10,7 @@ This automatically creates the necessary ```.sh``` file and submits it to the qu
 
 ```python g16_discovery_lopez.py FILENAME.com NPROCS TIME(in days) MEMORY```
 
-If you are submitting a lot of gaussian jobs we recommend creating an alias in your .bashrc for this script to easily call it. 
+If you are submitting a lot of gaussian jobs we recommend creating an alias in your .bashrc to call this script easily. 
 
 ## Batch submitting jobs
 In some cases you may have multiple ```.com/gjf``` files that you want to submit all at the same time. This can be easily done by using a loop in bash:
