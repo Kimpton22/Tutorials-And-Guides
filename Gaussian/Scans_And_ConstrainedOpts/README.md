@@ -1,4 +1,4 @@
-# 1. Scans and Constrained Optimizations
+# 2. Scans and Constrained Optimizations
 Constrained optimizations and scans in gaussian look to minimize the energy of a structure by varying geometric parameters in the molecule, within the bounds of user-defined constraints. Constrained optimizations are useful to freeze certain critical geometric parameters while allowing the rest of the structure to relax into a better geometry. Scans are a series of constrained optimizations which iteratively increase or decrease on one (1D) or two (2D; not recommended) geometric parameters. Scans are especially useful to get a rudimentary idea of the PES and search for TSs or maxima on the PES. Each chemical reaction requires some form of bond breakage, so the geometric parameters around this bonding change can be scanned to find a good guess for TSs. 
 ## References
 Opt keyword info: [https://gaussian.com/opt/] (see options and modredundant for more information on constrained optimizations specifically)
