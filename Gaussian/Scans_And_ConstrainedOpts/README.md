@@ -1,17 +1,18 @@
 # 1. Scans and Constrained Optimizations
 Ground state geometry optimizations in gaussian look to minimize the energy of a structure by varying geometric parameters in the molecule. It does this using first and sometimes second order derivatives. Geometry optimizations will continue until a) a stationary point is reached on the potential energy surface (PES) (stationary points includes TSs and minima) b) an error causes the job to end early or c) the maximum number of geometry iterations is reached.
 ## References
-Opt keyword info: [https://gaussian.com/opt/]
+Opt keyword info: [https://gaussian.com/opt/] (see options and modredundant for more information on constrained optimizations specifically)
 
-Freq keyword info: [https://gaussian.com/freq/]
 
 ## Files necessary
 ```.com or .gjf and .sh (not necessary if using python submit script)```
 
 ## Keywords and Mandatory Set-up
-The is one mandatory keyword for geometry optimizations which is ```opt=modredundant```. ```opt``` asks gaussian to do a geometry optimization (searching for a minimum energy structure by default) and the ```modredundant``` option signals to gaussian that there are geometric constraints. 
+There is one mandatory keyword for geometry optimizations which is ```opt=modredundant```. ```opt``` asks gaussian to do a geometry optimization (searching for a minimum energy structure by default) and the ```modredundant``` option signals to gaussian that there are geometric constraints. 
 
-Constraints and scans are added to the bottom of the ```.com/gjf``` file, after all xyz coordinated. Make sure that there is a blank line separating the xyz coordinates and the constraints. There is no limit on the number of constraints you can add, however adding too many constraints often leads to errors in gaussian, so limit them as much as possible. 
+Constraints and scans are added to the bottom of the ```.com/gjf``` file, after all xyz coordinated. Make sure that there is exactly one blank line separating the xyz coordinates and the constraints. There is no limit on the number of constraints you can add, however adding too many constraints often leads to errors in gaussian, so limit them as much as possible. 
+
+Any geometric parameter can be constrained or scanned. This include bond lengths, angles and dihedrals. Constraints are set first by indicating 
 ### Optional Keywords
 Within the "opt" keyword, there are a number of optional modifiers that may aid your minimum geometry optimization. To use these, add them to the opt keyword in this way: ```opt=(OPTION1,OPTION2,OPTION3,...)```. Information for all options can be found here: [https://gaussian.com/opt/]
 1. calcfc - This option calculates force constants for the molecule which can often speed up optimizations (more direct path to minimum can be found). This can be especially useful for shallow PESs (where large geometric changes result in small energetic changes)
