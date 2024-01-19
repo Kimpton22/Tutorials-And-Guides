@@ -33,10 +33,7 @@ Within the "opt" keyword, there are a number of optional modifiers that may aid 
 ### Scans
 2. Open the ```.log``` file with GaussView. Right-click in the blue space to open the options and go down to "Results", then click on "Scan..." to view the scanned geometries and their electronic energies. Often times we perform scans to find a TS on the PES. In this case, we are searching for a maximum on the scan. The geometry of the maximum point on the scan graph can be saved as a new structure to be submitted as a TS optimization.
 3. In many cases, no maximum will be found and the energy will consistently increase or decrease. This can indicate a number of things:
-
     1. First, its possible that this is not the best geometric constraint to find the TS. Try scanning other geometric parameters which are related to the reaction.
-    
     2. Second, many TSs require the movement of multiple geometric parameters. As one parameter is scanned the other geometric parameters will move to compensate, usually this is robust enough to find a maximum on the scan PES. However, for tricky reactions/TSs, it may be helpful to perform a 2D scan (where two geometric constraints are scanned). Every combination of BL/Angle/Dihedral will be tested (unless the job fails early), which means if you want to scan two bonds with 10 steps each, 100 (10*10) geometries and energies will be generated. If the job does not error out, gaussian will convert the scan plot into a 3D graph, but if any error occurs it treats the result as a 1D scan, which can be difficult to interpret. Generally speaking 2D scans are difficult to perform and should be avoided if at all possible.
-    
     3. Lastly, there a numerous chemical reactions for which methods cannot calculate TSs (or maximums) for. A good example of this is the first step of an SN1 reaction, which is notoriously difficult to find TSs for with DFT especially. This mostly occurs for bond dissociations, especially with ionization like in the SN1 reaction. Another example of this is protonation/deprotonation steps, which you should not attempt to find TSs for. 
 
