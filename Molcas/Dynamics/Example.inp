@@ -1,0 +1,37 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis=ano-s-vdzp 
+ Group=c1
+ RICD
+
+>> FOREACH ITER in (1 .. 2000)
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ Fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin=1
+ Nactel=10 0 0 
+ Charge=0
+ Ras1=0
+ Ras2=9
+ Ras3=0
+ ITERATIONS=200,100
+ CIRoot=8 8 1
+ MDRLXR=2
+
+&Surfacehop
+ tully
+ decoherence = 0.1
+
+&ALASKA
+
+&Dynamix
+ velver
+ dt = 20
+ velo = 3
+ ther= 2
+ temp = 300
+
+>> End do
