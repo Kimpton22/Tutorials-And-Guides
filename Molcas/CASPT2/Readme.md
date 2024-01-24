@@ -1,5 +1,5 @@
 # CASPT2 - Vertical Excitation Energy
-Second-order multiconfigurational perturbation theory is used in the program CASPT2 to compute the (dynamic) correlation energy.
+Second-order multiconfigurational perturbation theory is used in the program CASPT2 to compute the (dynamic) correlation energy. XMS is the extended multistate method and the perturbations are computed with one common zeroth-order Hamiltonian.
 
 ## References
 CASPT2: [https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/rasscf.html](https://molcas.gitlab.io/OpenMolcas/sphinx/users.guide/programs/caspt2.html)
