@@ -5,6 +5,8 @@
  Group=c1 (specify the symmetry of the molecule, c1 = nosymm)
  RICD
 
+>> FOREACH ITER in (1 .. ####)
+
 &SEWARD
 doanalytic
 
@@ -19,13 +21,13 @@ doanalytic
  Ras3="#" (number of orbitals in each symmetry for RAS3)
  ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
  CIRoot="# # #" (Num of states, Num of Weights, Weight)
- Rlxroot="#" (State to be relaxed to in geometry optimization)
+ MDRlxroot="#" (State to be relaxed to in geometry optimization)
 
 &Surfacehop
- tully
- decoherence = #.#
+ tully (enables the Tully–Hammes-Schiffer integration)
+ decoherence = #.# (enables the decoherence correction in the population density matrix)
 
-&ALASKA
+&ALASKA (calculates the energy gradient for specified state, default set to Rlxroot)
 
 &Dynamix
  velver
