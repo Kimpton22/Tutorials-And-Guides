@@ -1,0 +1,29 @@
+&GATEWAY
+ coord=$MOLCAS_PROJECT.xyz
+ basis (basis set for all atoms)
+ "Basis-Set"
+ Group=c1 (specify the symmetry of the molecule, c1 = nosymm)
+ RICD
+
+&SEWARD
+doanalytic
+
+&RASSCF
+ fileorb=$MOLCAS_PROJECT.StrOrb
+ Spin="#" (value of spin multiplicity)
+ Nactel="# # #" (Num Orbitals, 0, 0)
+ Inactive="#" (orbital before active space begins)
+ Charge="#" (total charge on the system as an integer)
+ Ras1="#" (number of orbitals in each symmetry for RAS1)
+ Ras2="#" (number of orbitals in each symmetry for RAS2)
+ Ras3="#" (number of orbitals in each symmetry for RAS3)
+ ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
+ CIRoot="# # #" (Num of states, Num of Weights, Weight)
+ Rlxroot="#" (State to be relaxed to in geometry optimization)
+
+&RASSI
+
+&CASPT2
+MaxIterations=500
+XMULtistate
+all

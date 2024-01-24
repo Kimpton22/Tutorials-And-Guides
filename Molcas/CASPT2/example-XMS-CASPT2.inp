@@ -1,0 +1,27 @@
+&GATEWAY
+ coord=$Project.xyz
+ basis=ano-s-vdzp 
+ group=C1
+ RICD
+
+&SEWARD
+ doanalytic
+
+&RASSCF
+ FileOrb=$Project.StrOrb
+ Spin=1
+ Symmetry=1
+ Charge=0
+ NActel=8
+ Ras2=8
+ CIRoot=8 8 1
+ Rlxroot=1
+
+&RASSI
+
+&CASPT2
+MaxIterations=500
+XMULtistate
+all
+
+
