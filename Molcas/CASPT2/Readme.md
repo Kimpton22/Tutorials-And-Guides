@@ -39,3 +39,48 @@ _State 1 is the ground state_
 ```
 <img width="845" alt="Screenshot 2024-01-24 at 4 24 48 PM" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/334899da-8121-497f-9255-b4e070b33164">
 
+
+# Absorption Spectrum
+The XMS-CASPT2 will be computed for 500 non-equilibrium geometries using Wigner sampling and the results will be used to plot a spectrum
+
+
+## Files necessary
+```.inp```,```.xyz```, ```.StrOrb```,```.freq.molden```, ```control```,Gen-FSSH.py```, ```collector.sh```,``` plot-abs.py```
+_Input, XYZ, and StrOrb are the same as XMS-CASPT2_
+_.freq.molden from Opt_
+
+## Submission
+
+1. Request resources
+```
+srun -N 1 --exclusive --partition=short --time=23:59:59 --pty /bin/bash
+```
+2. Load python
+```
+module load python/3.7.1
+```
+
+4. Generate input file and wigner samples - It will generate the wigner.xyz
+```
+python Gen-FSSH.py -x control
+```
+_Number of molecules = nodes x cores_
+
+5. To run submit the jobs, add in the first line of the runall.sh:  
+```
+ #!/bin/sh
+```
+6. Submit runall
+
+## Analysis
+1. Use ```collector.sh``` to extract energies
+   ```
+   sbatch collector.sh
+   ```
+2. Check generated ```data.txt```, and replace empty space (oscillator less than threshold) to 0. 
+3. Plot spectrum - It will have S1 to S3
+   ```
+   python3 plot-abs.py
+    ```
+   ![abs-dbh-unsub-wigner](https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/7e43ce50-611b-4605-b50e-2b7b256924d5)
+
