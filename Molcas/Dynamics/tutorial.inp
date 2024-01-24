@@ -20,4 +20,19 @@ doanalytic
  ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
  CIRoot="# # #" (Num of states, Num of Weights, Weight)
  Rlxroot="#" (State to be relaxed to in geometry optimization)
+
+&Surfacehop
+ tully
+ decoherence = #.#
+
+&ALASKA
+
+&Dynamix
+ velver
+ dt = ##
+ velo = #
+ ther= #
+ temp = ###
+
+>> End do
  
