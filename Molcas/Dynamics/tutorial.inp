@@ -5,7 +5,7 @@
  Group=c1 (specify the symmetry of the molecule, c1 = nosymm)
  RICD
 
->> FOREACH ITER in (1 .. ####)
+>> FOREACH ITER in (1 .. ####) (number of iterations for each dynamics step [time], i.e 2000 = 1 ps)
 
 &SEWARD
 doanalytic
@@ -21,7 +21,7 @@ doanalytic
  Ras3="#" (number of orbitals in each symmetry for RAS3)
  ITERATIONS=###,### (num of RASSCF iterations, max num of iterations used in the orbital optimization)
  CIRoot="# # #" (Num of states, Num of Weights, Weight)
- MDRlxroot="#" (State to be relaxed to in geometry optimization)
+ MDRLXR="#" (State to be relaxed to in geometry optimization, MD needed for dynamics)
 
 &Surfacehop
  tully (enables the Tully–Hammes-Schiffer integration)
@@ -30,11 +30,11 @@ doanalytic
 &ALASKA (calculates the energy gradient for specified state, default set to Rlxroot)
 
 &Dynamix
- velver
- dt = ##
- velo = #
- ther= #
- temp = ###
+ velver (specifies the velocity Verlet algorithm)
+ dt = ## (Defines the ∂t which is the time step in the MD simulation)
+ velo = # (Specifies how the initial velocities are generated, see MOLCAS manual for more details)
+ ther= # (Regulates the control of the temperature by scaling the velocities,see MOLCAS manual for more details)
+ temp = ### (Defines the numerical value of the temperature to preform MD)
 
 >> End do
  
