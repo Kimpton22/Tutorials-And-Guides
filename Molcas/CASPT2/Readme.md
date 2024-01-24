@@ -71,6 +71,9 @@ _Number of molecules = nodes x cores_
  #!/bin/sh
 ```
 6. Submit runall
+```
+sbatch runall.sh
+```
 
 ## Analysis
 1. Use ```collector.sh``` to extract energies
