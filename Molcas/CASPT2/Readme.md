@@ -30,6 +30,7 @@ sbatch XXX.sh
 ```
 _Remember to convert the energies to eV (multiply by 27.2114) and subtract the S0 Energy to get the VEE_
 <img width="482" alt="Screenshot 2024-01-24 at 4 25 26 PM" src="https://github.com/Kimpton22/Tutorials-And-Guides/assets/100699955/4ef7f35c-f38c-4266-93bf-44ca6eb8c8ba">
+
 _State 1 is the ground state_
 
 5. Search for oscillator strength:
