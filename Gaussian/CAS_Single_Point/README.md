@@ -1,4 +1,4 @@
-# . Gaussian CASSCF Single Point
+# 6. Gaussian CASSCF Single Point
 Similar to molcas, Gaussian is also able to perform CASSCF calculations (for more details on this method see the molcas/CASSCF tutorial). While the CAS method is implementable in Guassian, it is not recommended over molcas, and should only be used when the results from molcas seem abnormal (usually when molcas generates and odd molecular structure). 
 ## References
 CAS method info: [https://gaussian.com/cas/]
