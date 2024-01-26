@@ -17,4 +17,4 @@ In some cases you may have multiple ```.com/gjf``` files that you want to submit
 
 ```for i in *.com; do python g16_discovery_lopez $i NPROCS TIME(in days) MEMORY; sleep 1; done```
 
-This loops through each ```.com``` file in the current directory and submits the job. ```sleep 1``` is required to space out job submissions so that you don't overload the queueing process.
+This loops through each ```.com``` file in the current directory and submits the job. ```sleep 1``` is recommended to space out job submissions so that you don't overload the queueing process.
