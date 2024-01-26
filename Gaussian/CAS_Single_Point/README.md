@@ -7,7 +7,7 @@ CAS method info: [https://gaussian.com/cas/]
 ```.com or .gjf and .sh (not necessary if using python submit script)```
 
 ## Keywords and Usage
-There is one mandatory keyword for CAS single points in Gaussian which is ```CAS(#ACTIVE_ELECTRONS,#ORBITALS)```. **Note that the largest active space that Gaussian can accomodate without error is an 8,8.**
+There is one mandatory keyword for CAS single points in Gaussian which is ```CAS(#ACTIVE_ELECTRONS,#ORBITALS) formcheck```. Note that CAS is it's own method and should replace the DFT method. **Also note that the largest active space that Gaussian can accomodate without error is an 8,8.**
 
 ### Optional Keywords
 Within the "CAS" keyword, there are a number of optional modifiers that may aid your minimum geometry optimization. To use these, add them to the opt keyword in this way: ```CAS(#ACTIVE_ELECTRONS,#ORBITALS,OPTION1,OPTION2,OPTION3,...)```. Information for all options can be found here: [https://gaussian.com/cas/]
