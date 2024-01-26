@@ -7,12 +7,13 @@ CAS method info: [https://gaussian.com/cas/]
 ```.com or .gjf and .sh (not necessary if using python submit script)```
 
 ## Keywords and Usage
-There is one mandatory keyword for CAS single points in Gaussian which is ```CAS(#ACTIVE_ELECTRONS,#ORBITALS)```.
+There is one mandatory keyword for CAS single points in Gaussian which is ```CAS(#ACTIVE_ELECTRONS,#ORBITALS)```. **Note that the largest CAS job that Gaussian can accomodate without error is an 8,8.**
 
 ### Optional Keywords
 Within the "CAS" keyword, there are a number of optional modifiers that may aid your minimum geometry optimization. To use these, add them to the opt keyword in this way: ```CAS(#ACTIVE_ELECTRONS,#ORBITALS,OPTION1,OPTION2,OPTION3,...)```. Information for all options can be found here: [https://gaussian.com/cas/]
 1. NRoot=j - This requests that states out to the jth excited state be used in the configurational interaction (CI). Combine this with the StateAverage option to include state averaging out to the jth excited state
-2. StateAverage - Calculates state averaging out up to the NRoot=j excited state. If this option is used, an additional line at the bottom of the input file (after all xyz coordinates) must be added to provide the weights for each state. It is normal to use equal weighting, so for NRoot=5 with StateAverage, you would add ```0.2 0.2 0.2 0.2 0.2``` to the end of the input file. Also make sure that there are no addition lines (blank or otherwise) after this line. 
+2. StateAverage - Calculates state averaging out up to the NRoot=j excited state. If this option is used, an additional line at the bottom of the input file (after all xyz coordinates) must be added to provide the weights for each state. It is normal to use equal weighting, so for NRoot=5 with StateAverage, you would add ```0.2 0.2 0.2 0.2 0.2``` to the end of the input file. Also make sure that there are no addition lines (blank or otherwise) after this line.
+3. Opt=conical - This is a separate keyword (and would not be put inside of the CAS()) used for optimizing conical intersections with Gaussian. 
 
 ## Analysis
 See the molcas/CASSCF section for analysis.
