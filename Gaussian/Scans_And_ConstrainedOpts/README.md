@@ -21,7 +21,7 @@ B 1 2 S 10 0.2 --> scans the bond between atoms 1 and 2, starting from the initi
 B 1 2 S 10 -0.2 --> scans the bond between atoms 1 and 2 in the reverse direction (i.e. reducing the bond length by 0.2 angstroms at each iterative step)
 
 ### Optional Keywords
-Within the "opt" keyword, there are a number of optional modifiers that may aid your minimum geometry optimization. To use these, add them to the opt keyword in this way: ```opt=(OPTION1,OPTION2,OPTION3,...)```. Information for all options can be found here: [https://gaussian.com/opt/]
+Within the "opt" keyword, there are a number of optional modifiers that may aid your calculation. To use these, add them to the opt keyword in this way: ```opt=(OPTION1,OPTION2,OPTION3,...)```. Information for all options can be found here: [https://gaussian.com/opt/]
 1. calcfc - This option calculates force constants for the molecule which can often speed up optimizations (more direct path to minimum can be found). This can be especially useful for shallow PESs (where large geometric changes result in small energetic changes)
 
 ## Analysis
