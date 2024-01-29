@@ -25,8 +25,8 @@ To run all the trajectories you will need to submit the runall command.
 Files that you need are: 
 1. traj_analyzer.py - analyzer scripts developed my Jingbai (need to link to Jinbai's github)
 2. control files
-a. 01-diagnosis
-b. 02-energy_conservation
-c. 03-data_extraction
-d. 04-state_populations
-e. 05-parameter_tracking
+- 01-diagnosis
+- 02-energy_conservation
+- 03-data_extraction
+- 04-state_populations
+- 05-parameter_tracking
