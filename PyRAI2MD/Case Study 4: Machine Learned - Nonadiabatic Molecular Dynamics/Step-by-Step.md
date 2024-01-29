@@ -18,3 +18,15 @@ Output:
 1. {filename}-[1–###] – subfolders for ML-NAMD simulations
 2. runset-[1-##] – submission script for grouped ML-NAMD simulations
 3. runall.sh – script to submit all ML-NAMD simulations
+
+To run all the trajectories you will need to submit the runall command.
+
+# Step 2: Analysis
+Files that you need are: 
+1. traj_analyzer.py - analyzer scripts developed my Jingbai (need to link to Jinbai's github)
+2. control files
+   a. 01-diagnosis
+   b. 02-energy_conservation
+   c. 03-data_extraction
+   d. 04-state_populations
+   e. 05-parameter_tracking
