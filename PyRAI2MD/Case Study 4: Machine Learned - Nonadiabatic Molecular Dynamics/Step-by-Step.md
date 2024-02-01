@@ -30,15 +30,29 @@ Files that you need are:
 - 01-diagnosis
 
 This will check for the completeness of the trajectories
+
+Output: 
+1. complete - a text file containing a list of all the trajectories that suffice the threshold
 - 02-energy_conservation
 
 This will check the energy conservation of the trajectories, we would be able to modify the maximum energy drift value
+
+Output
+1. conserved - a text file containing a list of all the trajectories that conserved energy under the maximum energy drift value. There is not a single value that is a standard value for the maximum energy drift and can be optimized for the specific system.
+
 - 03-data_extraction
 
 This will extract the data from the trajectories into a json file
+
+Output: 
+1. {filename}.json - json file that contains all the trajectory information. This is used in further steps to speed up the data analysis process, where the script no longer reads the trajectory folders, but the newly created {filename}.json file
+   
 - 04-state_populations
 
 This will extract the state population data from the json file to create a state population map using the ``plot-2d-state-pop.py`` script
 - 05-parameter_tracking
 
 This will extract the specific parameters you want to track for the specific trajectories that conserve energy. 
+
+Outputs: 
+1. plot-{filename}.json - json file that contains the different parameters that you measured. This should be in the same order as seen in the `05-parameter_tracking` file
