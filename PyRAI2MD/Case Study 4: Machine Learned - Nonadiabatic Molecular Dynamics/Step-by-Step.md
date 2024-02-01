@@ -28,12 +28,12 @@ Files that you need are:
 1. traj_analyzer.py - analyzer scripts developed my Jingbai (need to link to Jinbai's github)
 2. control files
 - 01-diagnosis
-  This will check for the completeness of the trajectories
+This will check for the completeness of the trajectories
 - 02-energy_conservation
-  This will check the energy conservation of the trajectories, we would be able to modify the maximum energy drift value
+This will check the energy conservation of the trajectories, we would be able to modify the maximum energy drift value
 - 03-data_extraction
-  This will extract the data from the trajectories into a json file
+This will extract the data from the trajectories into a json file
 - 04-state_populations
-  This will extract the state population data from the json file to create a state population map using the ``plot-2d-state-pop.py`` script
+This will extract the state population data from the json file to create a state population map using the ``plot-2d-state-pop.py`` script
 - 05-parameter_tracking
-  This will extract the specific parameters you want to track for the specific trajectories that conserve energy. 
+This will extract the specific parameters you want to track for the specific trajectories that conserve energy. 
