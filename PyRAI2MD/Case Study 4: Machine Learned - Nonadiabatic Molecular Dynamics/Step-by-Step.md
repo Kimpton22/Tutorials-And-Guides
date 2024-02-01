@@ -8,8 +8,10 @@ Files that are needed:
 6. sampling – the input to generate ML-NAMD simulations
 
 # Step 1: Initial condition 
-This will run a Wigner sampling on the reactant and will create the folders for the initial conditions. This folder should contain the following: 
-3. {}
+This will run a Wigner sampling on the reactant and will create the folders for the initial conditions. This folder should contain the following:
+1. {filename}-###.xyz - Wigner sampled geometry
+2. run_PyRAI2MD.sh - submission script for the PyRAI2MD job
+3. input - PyRAI2MD input file
 
 How to run:
 ``python3 traj_generator.py control``
@@ -26,7 +28,12 @@ Files that you need are:
 1. traj_analyzer.py - analyzer scripts developed my Jingbai (need to link to Jinbai's github)
 2. control files
 - 01-diagnosis
+  This will check for the completeness of the trajectories
 - 02-energy_conservation
+  This will check the energy conservation of the trajectories, we would be able to modify the maximum energy drift value
 - 03-data_extraction
+  This will extract the data from the trajectories into a json file
 - 04-state_populations
+  This will extract the state population data from the json file to create a state population map using the ``plot-2d-state-pop.py`` script
 - 05-parameter_tracking
+  This will extract the specific parameters you want to track for the specific trajectories that conserve energy. 
