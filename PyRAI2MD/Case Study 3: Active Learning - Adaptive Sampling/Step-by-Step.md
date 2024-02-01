@@ -1,8 +1,8 @@
-#Case Study 3: Active learning - Adaptive sampling
+# Case Study 3: Active learning - Adaptive sampling
 This step will allow you to extend your initial training set to undersample regions through the usage of a committee of NN. 
 
 Files that you need: 
-1. input – PyRAI2MD input file specifically for adaptive sampling. 
+1. input – PyRAI2MD input file specifically for adaptive sampling 
 2. run_PyRAI2MD.sh – submission script
 3. {filename}-shuffled.json– initial training data from the interpolation step and the one used for the committee model training and grid search steps
 4. NN-bd-td – the committee model that was created using the optimal hyperparameters
