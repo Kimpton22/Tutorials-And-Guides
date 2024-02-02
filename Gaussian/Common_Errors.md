@@ -1,5 +1,5 @@
 # Common Error Messages and Solutions
-Most errors in Gaussian end in the message: ```Error termination via Lnk1e```. This is the general "Oh no gaussian ran into a problem". Unfortunately, most gaussian error messages are not clear or easily diagnosable. Generally speaking, most gaussian jobs tend to fail due to a lack of convergence in either the or iterative geometries (more common) or the SCF procedure (less common). Errors within the SCF procedure and other gaussian errors as well as good solutions have been documented here: [https://docs.alliancecan.ca/wiki/Gaussian_error_messages]
+Most errors in Gaussian end in the message: ```Error termination via Lnk1e```. This is the general "Oh no gaussian ran into a problem". Unfortunately, most gaussian error messages are not clear or easily diagnosable. Generally speaking, most gaussian jobs tend to fail due to a lack of convergence in either the or iterative geometries (more common) or the SCF procedure (less common). Errors within the SCF procedure and other gaussian errors as well as good solutions have been documented here: [https://docs.alliancecan.ca/wiki/Gaussian_error_messages]. Other errors not covered in this source which we have encountered are detailed at the bottom of this page (note that some are still open issues and have not been fully solved).
 
 ## Convergence failure -- maximum number of iterative geometries reached
 For any geometry optimization to converge (whether to a minimum, TS, or on an excited state), the change in energy between iterative geometries needs to be quite small (<~10<sup>-7</sup>). If this convergence criteria is not met, then Gaussian will continue to iterate the geometry until convergence is met or a certain threshold of iterations is reached. This threshold is based on the size of the molecule, but has a minimum value of 20 iterations. Nonetheless, many jobs, especially ones which have exotic electronic structures or if a poor input geometry was provided, can run into this threshold. 
@@ -14,7 +14,16 @@ First, always check the optimization plot and scan through the iterative geometr
     * The structure diverged away from the target structure (most common with TS optimizations where the structure falls to the reactants or products) - in which case, for minima try a new starting geometry or reduce the maxstep; and for TS try shifting the input geometry away from whichever structure the TS collapsed towards
 4. A special note for minima (especially intermediates on the PES) which collapse towards a different minima. The optimization plot for these cases often gives a rudimentary picture of the PES, and in somecases, the iterative geometries generated will path through the TS for a given transformation. These optimization plots tend to resemble IRCs, with two "flat" (minimum) areas on either side of a maximum in energy (this area can be quite spikey as the energy changes rapidly). It is possible to take a structure from this region and successfully optimize to the TS for the reaction.
 
+## Other issues
+### No output or end message was generated, the job just died
+These cases are especially tricky to diagnose, but usually happen due to some issue on the HPC's end. Try re-submitting or restarting and hope it was just some glitch in the matrix.
 
-This [https://docs.alliancecan.ca/wiki/Gaussian_error_messages] source has excellent documentation of the most common Gaussian error messages.
+### "Inv3 failed in PCMMkU"
+This is an issue in the solvation model of a job. It happens most often in systems with multiple molecular fragments, where Guassian has trouble with the solvent sphere(s) around the fragments. Try moving the fragments closer together and reducing the maxstep size. 
 
+### "Illegal MolTyp in RWMol1"
+We still do not have a fix for this issue and it is not well-documented online, but it seems that this issue happens when Gaussian tries to read data from the checkpoint file (for whatever reason). It is possible that this is an issue on the HPC's end.
+
+### "NInts<0 in InToWP"
+We still do not have a fix for this issue and it is not well-documented online, but it seems that this issue happens when Gaussian tries to read data from the checkpoint file (for whatever reason). It is possible that this is an issue on the HPC's end.
 
