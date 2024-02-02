@@ -8,14 +8,13 @@ For any geometry optimization to converge (whether to a minimum, TS, or on an ex
 First, always check the optimization plot and scan through the iterative geometries, as this can often indicate the issue the calculation ran into and/or provide new guess geometries that might converge with slightly different methods or keywords. Here are a few things to look for and keep in mind:
 1. Repetitive cycles (or repetitive zig-zags) in the optimization plot: The iterative process sometimes gets stuck in cycles, constantly shifting between 2 structures, where the true critical point on the PES is the averaged structure between these two repetitive geometries. To solve this issue you can try reducing the maxstep size, though there is no true guarantee that whatever stepsize you choose will yield the correct structure. Alternatively, you can manually alter the geometry to represent the averaged structure that Gaussian is trying to optimize to (i.e. find the geometric change between repetitive strucutres and average this geometric parameter to use as a new input).
 2. "Flat" areas which seem close to convergence: These areas loosely indicate that a critical point on the PES could be nearby. If you are really struggling to get convergence, try submitting one of the iterative geometries in this flat region as its own optimization with a smaller maxstep.
-3. If there are none of the above features, but your job still reached the iteration threshold, it is possible that
-    * a) your initial guess for the geometry was too far off - in which case, re-evaluate your input coordinates and knowledge of the reaction
-    * b) the job simply needs more iterative geometries to complete - in which case, save the last step of the geometry optimization as a new input file and restart the calculation (note that the iteration threshold can be modified by adding the opt=(maxcycles=N) option)
-    * c) the structure diverged away from the target structure (most common with TS optimizations where the structure falls to the reactants or products) - in which case, for minima try a new starting geometry or reduce the maxstep; and for TS try shifting the input geometry away from whichever structure the TS collapsed towards
-4. 
+3. If there are none of the above features, but your job still reached the iteration threshold, it is possible that:
+    * Your initial guess for the geometry was too far off - in which case, re-evaluate your input coordinates and knowledge of the reaction
+    * The job simply needs more iterative geometries to complete - in which case, save the last step of the geometry optimization as a new input file and restart the calculation (note that the iteration threshold can be modified by adding the opt=(maxcycles=N) option)
+    * The structure diverged away from the target structure (most common with TS optimizations where the structure falls to the reactants or products) - in which case, for minima try a new starting geometry or reduce the maxstep; and for TS try shifting the input geometry away from whichever structure the TS collapsed towards
+4. A special note for minima (especially intermediates on the PES) which collapse towards a different minima. The optimization plot for these cases often gives a rudimentary picture of the PES, and in somecases, the iterative geometries generated will path through the TS for a given transformation. These optimization plots tend to resemble IRCs, with two "flat" (minimum) areas on either side of a maximum in energy (this area can be quite spikey as the energy changes rapidly). It is possible to take a structure from this region and successfully optimize to the TS for the reaction.
 
 
 This [https://docs.alliancecan.ca/wiki/Gaussian_error_messages] source has excellent documentation of the most common Gaussian error messages.
 
-## Other errors and possible solutions
 
