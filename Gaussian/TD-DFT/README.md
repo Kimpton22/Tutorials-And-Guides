@@ -8,5 +8,9 @@ An optimized structure of the molecule of interest
 Should have the same parameters (i.e. solvent and dispersion correction used from opt)
 
 # Details on output
-Oscillator strength (f) is related to the extinction coefficient and therefore can relate directly to absorption.
-Use Keyword: excited state density
+Oscillator strength (f) is related to the extinction coefficient and, therefore can relate directly to absorption.
+Use Keyword: excited state density.
+
+
+# Errors
+For some details on errors, try looking through this github: https://wongzit.github.io/gaussian-common-errors-and-solutions/
