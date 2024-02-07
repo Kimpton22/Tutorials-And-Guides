@@ -9,6 +9,7 @@ https://github.com/northeastern-rc/pyflow-installation-script
 ### Reminders:
 - Make sure to have PyFlow.txt in the same directory as install_pyflow.sh.
 - If you have not loaded Gaussian and GAMESS on your .bashrc, you must uncomment lines 58 to 66 in the install_pyflow.sh file
+- Run pyflow on your scratch
 
 ### Testing installation
 
@@ -24,7 +25,7 @@ pyflow setup bench_round001 --config_file config-001.json
 
 #### Test 3 - Submit Workflow
 ```
-cp bench-MB/* bench_round001/unopt_pdbs/ cd bench_round001/ && pyflow begin --do_not_track
+cp bench-MB/* bench_round001/unopt_pdbs/ && cd bench_round001/ && pyflow begin --do_not_track
 ```
 
 #### Test 4 - Check progress
