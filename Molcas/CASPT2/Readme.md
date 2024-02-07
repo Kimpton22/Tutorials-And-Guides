@@ -76,12 +76,12 @@ sbatch runall.sh
 ```
 
 ## Analysis
-1. Use ```collector.sh``` to extract energies
+1. Update ```collector.sh``` based on the number of excited states you want to extract energies and then extract the data using:
    ```
    sbatch collector.sh
    ```
-2. Check generated ```data.txt```, and replace empty space (oscillator less than threshold) to 0. 
-3. Plot spectrum - It will have S1 to S3
+3. Check generated ```data.txt```, and replace empty space (oscillator less than threshold) to 0. 
+4. Plot spectrum - It will have S1 to S3
    ```
    python3 plot-abs.py
     ```
